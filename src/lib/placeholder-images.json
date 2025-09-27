@@ -1,3 +1,94 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "1",
+      "description": "Team member John Doe",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg5NTE1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "2",
+      "description": "Team member Jane Smith",
+      "imageUrl": "https://images.unsplash.com/photo-1593351799227-75df2026356b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODk3MzQ2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "3",
+      "description": "Team member Peter Jones",
+      "imageUrl": "https://images.unsplash.com/photo-1620580109994-39c4733c77b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NTg5NTIzMTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait professional"
+    },
+    {
+      "id": "4",
+      "description": "Team member Samantha Williams",
+      "imageUrl": "https://images.unsplash.com/photo-1573496527892-904f897eb744?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NTg5MjU2NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman professional"
+    },
+    {
+      "id": "5",
+      "description": "Testimonial avatar 1",
+      "imageUrl": "https://images.unsplash.com/photo-1595476147510-1a9b33600fc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBidXNpbmVzc3xlbnwwfHx8fDE3NTg4NjE2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person business"
+    },
+    {
+      "id": "6",
+      "description": "Testimonial avatar 2",
+      "imageUrl": "https://images.unsplash.com/photo-1453060113865-968cea1ad53a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjB0ZWNofGVufDB8fHx8MTc1ODk3MDUzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person tech"
+    },
+    {
+      "id": "7",
+      "description": "Testimonial avatar 3",
+      "imageUrl": "https://images.unsplash.com/photo-1621857093087-7daa85ab14a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBjb3Jwb3JhdGV8ZW58MHx8fHwxNzU4OTc4NDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person corporate"
+    },
+    {
+      "id": "8",
+      "description": "Case study image for finance",
+      "imageUrl": "https://images.unsplash.com/photo-1687720106084-d6e235ad226c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmaW5hbmNlJTIwc2VjdXJpdHl8ZW58MHx8fHwxNzU4OTc4NDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "finance security"
+    },
+    {
+      "id": "9",
+      "description": "Case study image for SaaS",
+      "imageUrl": "https://images.unsplash.com/photo-1635775017492-1eb935a082a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWNobm9sb2d5JTIwY29kZXxlbnwwfHx8fDE3NTg5Nzg0OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "technology code"
+    },
+    {
+      "id": "10",
+      "description": "Case study image for energy",
+      "imageUrl": "https://images.unsplash.com/photo-1678891802031-e51c2be60f8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwaW5mcmFzdHJ1Y3R1cmV8ZW58MHx8fHwxNzU4OTc4NDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "industrial infrastructure"
+    },
+    {
+      "id": "11",
+      "description": "Blog post on AI phishing",
+      "imageUrl": "https://images.unsplash.com/photo-1723187024776-e3d4f6627e22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBSSUyMHNlY3VyaXR5fGVufDB8fHx8MTc1ODk3ODQ5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI security"
+    },
+    {
+      "id": "12",
+      "description": "Blog post on ransomware",
+      "imageUrl": "https://images.unsplash.com/photo-1674049404913-2005c02245fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjeWJlciUyMGF0dGFja3xlbnwwfHx8fDE3NTg5Nzg0OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cyber attack"
+    },
+    {
+      "id": "13",
+      "description": "Blog post on cloud security",
+      "imageUrl": "https://images.unsplash.com/photo-1667984390553-7f439e6ae401?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjbG91ZCUyMGNvbXB1dGluZ3xlbnwwfHx8fDE3NTg5MzcxNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cloud computing"
+    },
+    {
+      "id": "14",
+      "description": "Blog post on ASM",
+      "imageUrl": "https://images.unsplash.com/photo-1542382257-80dedb725088?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZXR3b3JrJTIwc2VjdXJpdHl8ZW58MHx8fHwxNzU4OTUwNDU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "network security"
+    },
+    {
+      "id": "map",
+      "description": "Map to office",
+      "imageUrl": "https://images.unsplash.com/photo-1603466183710-70b84997a93f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc1ODk3NjgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city map"
+    }
+  ]
 }

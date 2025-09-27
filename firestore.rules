@@ -1,0 +1,27 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public write for contact forms and tool requests
+    match /contacts/{docId} {
+      allow write: if true;
+      allow read: if false; // Only admins should read
+    }
+
+    match /toolRequests/{docId} {
+      allow write: if true;
+      allow read: if false; // Only admins should read
+    }
+
+    // Blog posts and resources are public read-only
+    match /blogPosts/{docId} {
+      allow read: if true;
+      allow write: if false; // Managed via admin SDK
+    }
+    
+    match /resources/{docId} {
+      allow read: if true;
+      allow write: if false; // Managed via admin SDK
+    }
+  }
+}
