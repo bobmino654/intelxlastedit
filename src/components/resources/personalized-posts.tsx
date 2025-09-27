@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useFlow } from '@genkit-ai/next/client';
-import { personalizedBlogRecommendationsFlow } from '@/ai/flows/personalized-blog-recommendations';
+import { getPersonalizedBlogRecommendations, PersonalizedBlogRecommendationsOutput } from '@/ai/flows/personalized-blog-recommendations';
 import { blogPosts } from '@/lib/data';
 import { Button } from '../ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
@@ -20,18 +19,29 @@ const userProfiles = {
 type UserProfile = keyof typeof userProfiles;
 
 export function PersonalizedPosts() {
-  const [run, recommendations, loading] = useFlow(personalizedBlogRecommendationsFlow);
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<PersonalizedBlogRecommendationsOutput | null>(null);
   const [selectedProfile, setSelectedProfile] = useState<UserProfile>('ciso');
 
-  const getRecommendations = () => {
-    run({
-      userActivity: userProfiles[selectedProfile],
-      blogPostTitles: blogPosts.map(p => p.title),
-    });
+  const getRecommendations = async () => {
+    setLoading(true);
+    setResult(null);
+    try {
+      const recommendations = await getPersonalizedBlogRecommendations({
+        userActivity: userProfiles[selectedProfile],
+        blogPostTitles: blogPosts.map(p => p.title),
+      });
+      setResult(recommendations);
+    } catch (error) {
+      console.error(error);
+      // Optionally, show a toast or error message to the user
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const recommendedBlogPosts = recommendations?.recommendedPosts
-    ? blogPosts.filter(p => recommendations.recommendedPosts.includes(p.title))
+  const recommendedBlogPosts = result?.recommendedPosts
+    ? blogPosts.filter(p => result.recommendedPosts.includes(p.title))
     : [];
 
   return (
@@ -61,7 +71,7 @@ export function PersonalizedPosts() {
 
       {loading && <div className="mt-8 text-center">Thinking...</div>}
 
-      {recommendations && recommendedBlogPosts.length > 0 && (
+      {result && recommendedBlogPosts.length > 0 && (
          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {recommendedBlogPosts.map(post => (
                 <Card key={post.id}>
@@ -83,7 +93,7 @@ export function PersonalizedPosts() {
          </div>
       )}
 
-      {recommendations && recommendedBlogPosts.length === 0 && !loading && (
+      {result && recommendedBlogPosts.length === 0 && !loading && (
         <p className="mt-8 text-center text-muted-foreground">No specific recommendations found. Try another profile!</p>
       )}
     </section>
