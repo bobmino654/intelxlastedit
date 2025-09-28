@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://intelx360.com'),
   title: {
     default: 'IntelX360 Cybersecurity Solutions',
     template: '%s | IntelX360 Cybersecurity Solutions',
