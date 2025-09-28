@@ -17,7 +17,7 @@ const mailTransport = nodemailer.createTransport({
     },
 });
 
-const APP_NAME = 'IntelX Website';
+const APP_NAME = 'IntelX360 Website';
 
 // Sends an email notification when a new contact message is created.
 exports.sendContactEmail = functions.firestore.document('contacts/{contactId}').onCreate((snap, context) => {

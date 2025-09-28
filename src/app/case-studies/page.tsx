@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
   title: 'Case Studies',
-  description: 'Read real-world examples of how IntelX helps organizations defend against cyber threats and reduce risk.',
+  description: 'Read real-world examples of how IntelX360 helps organizations defend against cyber threats and reduce risk.',
 };
 
 export default function CaseStudiesPage() {

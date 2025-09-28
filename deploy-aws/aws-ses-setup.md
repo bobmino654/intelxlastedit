@@ -1,4 +1,4 @@
-# Amazon SES Setup for IntelX
+# Amazon SES Setup for IntelX360
 
 This guide covers setting up Amazon Simple Email Service (SES) to send emails from your Firebase Cloud Function.
 

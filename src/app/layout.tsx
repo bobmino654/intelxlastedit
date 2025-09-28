@@ -7,15 +7,15 @@ import { Footer } from '@/components/layout/footer';
 
 export const metadata: Metadata = {
   title: {
-    default: 'IntelX Cybersecurity Solutions',
-    template: '%s | IntelX Cybersecurity Solutions',
+    default: 'IntelX360 Cybersecurity Solutions',
+    template: '%s | IntelX360 Cybersecurity Solutions',
   },
   description: 'Protecting organizations worldwide by delivering actionable cyber intelligence and security solutions.',
   openGraph: {
-    title: 'IntelX Cybersecurity Solutions',
+    title: 'IntelX360 Cybersecurity Solutions',
     description: 'Protecting Your Digital Future Today.',
-    url: 'https://intelx.com',
-    siteName: 'IntelX Cybersecurity Solutions',
+    url: 'https://intelx360.com',
+    siteName: 'IntelX360 Cybersecurity Solutions',
     images: [
       {
         url: '/og-image.png', // To be created
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IntelX Cybersecurity Solutions',
+    title: 'IntelX360 Cybersecurity Solutions',
     description: 'Advanced threat intelligence and digital risk protection.',
     images: ['/og-image.png'], // To be created
   },

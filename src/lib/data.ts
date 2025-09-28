@@ -84,7 +84,7 @@ export const teamMembers = [
   {
     name: 'John Doe',
     role: 'CEO & Founder',
-    bio: 'With over 20 years in cybersecurity, John leads IntelX with a vision to make the digital world a safer place for all.',
+    bio: 'With over 20 years in cybersecurity, John leads IntelX360 with a vision to make the digital world a safer place for all.',
     imageId: '1',
   },
   {
@@ -102,14 +102,14 @@ export const teamMembers = [
   {
     name: 'Samantha Williams',
     role: 'VP of Client Success',
-    bio: 'Samantha ensures that every IntelX client receives world-class service and achieves their security goals.',
+    bio: 'Samantha ensures that every IntelX360 client receives world-class service and achieves their security goals.',
     imageId: '4'
   }
 ];
 
 export const testimonials = [
   {
-    quote: "IntelX's threat intelligence is second to none. They've helped us prevent numerous attacks before they could even launch.",
+    quote: "IntelX360's threat intelligence is second to none. They've helped us prevent numerous attacks before they could even launch.",
     name: 'CTO, Fortune 500 Financial',
     imageId: '5',
   },
@@ -130,7 +130,7 @@ export const caseStudies = [
     title: 'Preventing a Major Data Breach in the Financial Sector',
     clientIndustry: 'Finance',
     challenge: 'A major bank was facing sophisticated phishing campaigns and suspected an impending ransomware attack.',
-    solution: 'IntelX deployed its Threat Intelligence and Brand Protection services. We identified the threat actor group, monitored their infrastructure, and initiated takedowns of their phishing sites.',
+    solution: 'IntelX360 deployed its Threat Intelligence and Brand Protection services. We identified the threat actor group, monitored their infrastructure, and initiated takedowns of their phishing sites.',
     outcome: 'The ransomware attack was thwarted, preventing millions in potential losses. The bank\'s customer trust was preserved.',
     imageId: '8',
   },
@@ -146,8 +146,8 @@ export const caseStudies = [
     title: 'Responding to a Nation-State Attack on Critical Infrastructure',
     clientIndustry: 'Energy',
     challenge: 'An energy provider was targeted by a nation-state actor attempting to disrupt operations.',
-    solution: 'IntelX\'s Incident Response team was immediately deployed. Using advanced digital forensics, we identified the breach, contained the threat, and eradicated the actor from the network.',
-    outcome: 'Critical infrastructure remained operational. IntelX provided attribution data to national security agencies and fortified the client\'s defenses against future attacks.',
+    solution: 'IntelX360\'s Incident Response team was immediately deployed. Using advanced digital forensics, we identified the breach, contained the threat, and eradicated the actor from the network.',
+    outcome: 'Critical infrastructure remained operational. IntelX360 provided attribution data to national security agencies and fortified the client\'s defenses against future attacks.',
     imageId: '10'
   }
 ];

@@ -17,7 +17,7 @@ export default function ServicesPage() {
           Our Services
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
-          IntelX provides a full spectrum of cybersecurity services to identify, protect, detect, respond, and recover from threats.
+          IntelX360 provides a full spectrum of cybersecurity services to identify, protect, detect, respond, and recover from threats.
         </p>
       </section>
 

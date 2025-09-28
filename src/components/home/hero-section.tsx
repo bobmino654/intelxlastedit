@@ -6,7 +6,7 @@ import { Typewriter } from './typewriter';
 export function HeroSection() {
   const taglines = [
     'Protecting Your Digital Future Today.',
-    'IntelX: Intelligence that Protects.',
+    'IntelX360: Intelligence that Protects.',
     'Stay Ahead of Threats.',
   ];
 

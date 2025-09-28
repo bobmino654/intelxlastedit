@@ -4,7 +4,7 @@ import { pricingPlans } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Pricing Plans',
-  description: 'Find the right IntelX cybersecurity plan for your needs, from personal protection to enterprise-grade solutions.',
+  description: 'Find the right IntelX360 cybersecurity plan for your needs, from personal protection to enterprise-grade solutions.',
 };
 
 export default function PricingPage() {

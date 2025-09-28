@@ -135,7 +135,7 @@ export default function ContactPage() {
           </div>
           {mapImage && (
             <div className="relative h-96 w-full overflow-hidden rounded-lg">
-                <Image src={mapImage.imageUrl} alt="Map to IntelX office" fill className="object-cover" data-ai-hint={mapImage.imageHint} />
+                <Image src={mapImage.imageUrl} alt="Map to IntelX360 office" fill className="object-cover" data-ai-hint={mapImage.imageHint} />
             </div>
           )}
         </div>

@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about IntelX\'s mission, vision, and the expert team dedicated to protecting your digital future.',
+  description: 'Learn about IntelX360\'s mission, vision, and the expert team dedicated to protecting your digital future.',
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
     <div className="container py-12 md:py-20">
       <section className="text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">
-          About IntelX
+          About IntelX360
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
           We are a team of passionate cybersecurity experts dedicated to providing cutting-edge solutions to protect your digital assets.

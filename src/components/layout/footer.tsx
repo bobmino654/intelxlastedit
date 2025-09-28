@@ -57,7 +57,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border/40 pt-8 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} IntelX Cybersecurity Solutions. All rights reserved.
+          &copy; {new Date().getFullYear()} IntelX360 Cybersecurity Solutions. All rights reserved.
         </div>
       </div>
     </footer>

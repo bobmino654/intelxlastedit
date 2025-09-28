@@ -1,6 +1,6 @@
 {
-  "name": "intelx-cloud-functions",
-  "description": "Cloud Functions for IntelX Website",
+  "name": "intelx360-cloud-functions",
+  "description": "Cloud Functions for IntelX360 Website",
   "scripts": {
     "lint": "eslint .",
     "serve": "firebase emulators:start --only functions",

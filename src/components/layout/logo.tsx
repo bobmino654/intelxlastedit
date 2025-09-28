@@ -19,7 +19,7 @@ export function Logo({ className }: { className?: string }) {
         <path d="m14.5 9-5 5"></path>
       </svg>
       <span className="font-headline text-2xl font-bold text-white">
-        IntelX
+        IntelX360
       </span>
     </Link>
   );

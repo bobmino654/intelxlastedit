@@ -1,4 +1,4 @@
-# AWS EC2 Setup for IntelX Static Website
+# AWS EC2 Setup for IntelX360 Static Website
 
 This guide outlines the steps to set up an Ubuntu EC2 instance on AWS to host the static Next.js export.
 
@@ -6,13 +6,13 @@ This guide outlines the steps to set up an Ubuntu EC2 instance on AWS to host th
 
 1.  **Go to the EC2 Dashboard** in your AWS Console.
 2.  Click **Launch Instance**.
-3.  **Name:** `IntelX-WebApp-Server`.
+3.  **Name:** `IntelX360-WebApp-Server`.
 4.  **Application and OS Images (AMI):** Choose **Ubuntu**, and select the latest LTS version (e.g., Ubuntu Server 22.04 LTS).
 5.  **Instance Type:** `t2.micro` is sufficient for a low-traffic static site and is Free Tier eligible.
 6.  **Key Pair:** Create a new key pair or use an existing one. Download the `.pem` file and keep it safe. You'll need it to SSH into your instance.
 7.  **Network Settings:**
     *   Click **Edit**.
-    *   Create a new security group named `IntelX-WebApp-SG`.
+    *   Create a new security group named `IntelX360-WebApp-SG`.
     *   Add the following inbound rules:
         *   **Type:** `SSH`, **Source:** `My IP` (for secure access).
         *   **Type:** `HTTP`, **Source:** `Anywhere` (0.0.0.0/0).
