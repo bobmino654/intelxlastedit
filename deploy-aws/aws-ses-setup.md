@@ -10,7 +10,7 @@ You must prove that you own the domain you're sending emails from.
 2.  In the navigation pane, under **Configuration**, choose **Verified identities**.
 3.  Click **Create identity**.
 4.  Select **Domain** as the identity type.
-5.  Enter your domain name (e.g., `intelxgrp.com`).
+5.  Enter your domain name (e.g., `intelx360.xom`).
 6.  Click **Create identity**.
 7.  SES will generate three CNAME records. You must add these records to your domain's DNS settings (e.g., in Route 53, GoDaddy, Cloudflare).
 8.  It may take up to 72 hours for verification to complete, but it's usually much faster. The status will change to **Verified** in the SES console.
@@ -20,7 +20,7 @@ You must prove that you own the domain you're sending emails from.
 Even with a verified domain, it's good practice to verify the specific email address you'll use.
 
 1.  Follow the same steps as above, but select **Email address** as the identity type.
-2.  Enter the email address (e.g., `info@intelxgrp.com`).
+2.  Enter the email address (e.g., `info@intelx360.xom`).
 3.  SES will send a verification link to that email address. Click the link to complete verification.
 
 ## 3. Move Out of the Sandbox

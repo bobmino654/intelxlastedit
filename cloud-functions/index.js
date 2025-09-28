@@ -24,8 +24,8 @@ exports.sendContactEmail = functions.firestore.document('contacts/{contactId}').
     const data = snap.data();
 
     const mailOptions = {
-        from: `"${APP_NAME}" <info@intelxgrp.com>`,
-        to: 'info@intelxgrp.com',
+        from: `"${APP_NAME}" <info@intelx360.xom>`,
+        to: 'info@intelx360.xom',
         subject: `New Contact Message from ${data.name}`,
         html: `
             <h1>New Contact Form Submission</h1>
@@ -38,6 +38,6 @@ exports.sendContactEmail = functions.firestore.document('contacts/{contactId}').
     };
 
     return mailTransport.sendMail(mailOptions)
-        .then(() => console.log(`New contact email sent to info@intelxgrp.com`))
+        .then(() => console.log(`New contact email sent to info@intelx360.xom`))
         .catch((error) => console.error('There was an error while sending the email:', error));
 });

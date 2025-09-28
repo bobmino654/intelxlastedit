@@ -3,7 +3,7 @@ import { BarChart, BrainCircuit, Cloud, Server, ShieldCheck, Target, Users, Bot,
 export const contactDetails = {
   address: '24 Mirage City, Cairo, Egypt',
   phone: '+20 11558107744',
-  email: 'info@intelxgrp.com',
+  email: 'info@intelx360.xom',
 };
 
 export const services = [
