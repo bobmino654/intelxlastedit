@@ -21,25 +21,30 @@ export function Typewriter({
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
     const handleTyping = () => {
       const currentText = texts[textIndex];
+      
       if (isDeleting) {
-        setDisplayedText(currentText.substring(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
+        if (charIndex > 0) {
+          setDisplayedText(currentText.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        } else {
+          setIsDeleting(false);
+          setTextIndex((prev) => (prev + 1) % texts.length);
+        }
       } else {
-        setDisplayedText(currentText.substring(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-      }
-
-      if (!isDeleting && charIndex === currentText.length) {
-        setTimeout(() => setIsDeleting(true), delay);
-      } else if (isDeleting && charIndex === 0) {
-        setIsDeleting(false);
-        setTextIndex((prev) => (prev + 1) % texts.length);
+        if (charIndex < currentText.length) {
+          setDisplayedText(currentText.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else {
+          timeout = setTimeout(() => setIsDeleting(true), delay);
+        }
       }
     };
 
-    const timeout = setTimeout(
+    timeout = setTimeout(
       handleTyping,
       isDeleting ? deletingSpeed : typingSpeed
     );
