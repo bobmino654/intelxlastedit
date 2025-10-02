@@ -15,13 +15,13 @@ export function Footer() {
               Protecting Your Digital Future Today.
             </p>
             <div className="mt-4 flex space-x-4">
-              <Link href="#" aria-label="Twitter">
+              <Link href="https://x.com/Intelx360" aria-label="Twitter">
                 <Twitter className="h-6 w-6 text-muted-foreground transition-colors hover:text-accent" />
               </Link>
-              <Link href="#" aria-label="LinkedIn">
+              <Link href="https://www.linkedin.com/company/intelx360" aria-label="LinkedIn">
                 <Linkedin className="h-6 w-6 text-muted-foreground transition-colors hover:text-accent" />
               </Link>
-              <Link href="#" aria-label="GitHub">
+              <Link href="https://github.com/intelx360" aria-label="GitHub">
                 <Github className="h-6 w-6 text-muted-foreground transition-colors hover:text-accent" />
               </Link>
             </div>
