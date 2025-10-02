@@ -2,8 +2,8 @@ import { BarChart, BrainCircuit, Cloud, Server, ShieldCheck, Target, Users, Bot,
 
 export const contactDetails = {
   address: '24 Mirage City, Cairo, Egypt',
-  phone: '+20 11558107744',
-  email: 'info@intelx360.xom',
+  phone: '+20 1558107744',
+  email: 'info@intelx360.com',
 };
 
 export const services = [
@@ -82,27 +82,27 @@ export const pricingPlans = [
 
 export const teamMembers = [
   {
-    name: 'John Doe',
-    role: 'CEO & Founder',
-    bio: 'With over 20 years in cybersecurity, John leads IntelX360 with a vision to make the digital world a safer place for all.',
+    name: 'Ahmed Awad',
+    role: 'Chief Security Strategist',
+    bio: 'With 20+ years in cybersecurity, Ahmed leads IntelX360 as the mastermind behind its threat intelligence platform—innovating to stay ahead and making the digital world safer.',
     imageId: '1',
   },
   {
-    name: 'Jane Smith',
-    role: 'Chief Technology Officer',
-    bio: 'Jane is the mastermind behind our cutting-edge threat intelligence platform, constantly innovating to stay ahead of attackers.',
+    name: 'Mohamed Alhoseeny',
+    role: 'Head of Threat Researchr',
+    bio: 'Mohamed and his team of elite researchers work tirelessly to uncover new threats and protect our clients from emerging risks',
     imageId: '2',
   },
   {
-    name: 'Peter Jones',
-    role: 'Head of Threat Research',
-    bio: 'Peter and his team of elite researchers work tirelessly to uncover new threats and protect our clients from emerging risks.',
+    name: 'Yasmin',
+    role: 'Head of Projects',
+    bio: 'Orchestrates complex initiatives with precision and vision—turning strategies into impactful results.',
     imageId: '3',
   },
   {
-    name: 'Samantha Williams',
+    name: 'Nadeen',
     role: 'VP of Client Success',
-    bio: 'Samantha ensures that every IntelX360 client receives world-class service and achieves their security goals.',
+    bio: 'Nadeen ensures that every IntelX360 client receives world-class service and achieves their security goals.',
     imageId: '4'
   }
 ];
