@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 const serviceLinks: Record<string, string> = {
     'Penetration Testing': '/services/penetration-testing',
+    'Threat Intelligence': '/services/threat-intelligence',
 };
 
 
