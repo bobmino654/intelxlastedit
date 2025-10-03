@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { CheckCircle, Users, Shield, TrendingUp, BookCopy, Goal, LifeBuoy } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata: Metadata = {
@@ -10,12 +11,12 @@ export const metadata: Metadata = {
 };
 
 const vCisoDeliverables = [
-  { icon: Goal, title: 'Strategic Guidance', description: 'Tailored cybersecurity roadmaps that align with your unique business objectives, regulatory requirements, and risk profile.' },
-  { icon: BookCopy, title: 'Policy & Compliance Management', description: 'Development and enforcement of security policies to meet frameworks such as ISO 27001, NIST, GDPR, HIPAA, and more.' },
-  { icon: Shield, title: 'Risk & Gap Assessments', description: 'Comprehensive evaluations of your current security posture with prioritized recommendations for improvement.' },
-  { icon: Users, title: 'Vendor & Technology Advisory', description: 'Independent guidance on security solutions, vendors, and technologies to ensure cost-effective and resilient investments.' },
-  { icon: TrendingUp, title: 'Board-Level Reporting', description: 'Clear communication of cybersecurity risks and initiatives to executive leadership and stakeholders.' },
-  { icon: LifeBuoy, title: 'Incident Readiness & Oversight', description: 'Ensuring your organization is fully prepared to respond to and recover from security incidents with minimal impact.' },
+  { icon: Goal, title: 'Governance & Strategy', description: 'Define security objectives, build a multi-year roadmap, and ensure alignment with business priorities.' },
+  { icon: BookCopy, title: 'Risk & Compliance Management', description: 'Oversee regulatory requirements (ISO 27001, SOC 2, GDPR, HIPAA, PCI-DSS), conduct gap assessments, and support audit readiness.' },
+  { icon: Shield, title: 'Policy & Framework Development', description: 'Create and enforce security policies, standards, and incident response playbooks tailored to your organization.' },
+  { icon: LifeBuoy, title: 'Threat & Vulnerability Oversight', description: 'Review penetration test findings, vulnerability scans, and threat intelligence to guide proactive defenses.' },
+  { icon: TrendingUp, title: 'Board & Executive Reporting', description: 'Translate technical risks into business language, prepare executive dashboards, and present to leadership.' },
+  { icon: Users, title: 'Third-party & Vendor Risk', description: 'Assess supply chain risks, review contracts, and manage due diligence for vendors and partners.' },
 ];
 
 const benefits = [
@@ -25,6 +26,21 @@ const benefits = [
     'Make smarter, more cost-effective security investments.',
     'Build a resilient security culture from the top down.',
     'Gain continuous insight and oversight for long-term security maturity.'
+];
+
+const faqItems = [
+    {
+        question: "How is a vCISO different from a consultant?",
+        answer: "A consultant typically handles a single project; a vCISO is embedded in your leadership structure, guiding long-term strategy and governance."
+    },
+    {
+        question: "Can a vCISO present to our board or investors?",
+        answer: "Yes. Our vCISO advisors are experienced in executive communication and can translate technical risk into business context."
+    },
+    {
+        question: "How flexible is the engagement model?",
+        answer: "Very — you can choose retainer hours, fractional leadership, or project-specific engagements."
+    }
 ];
 
 
@@ -42,7 +58,7 @@ export default function VirtualCisoPage() {
 
       <section className="mt-20">
         <h2 className="text-center font-headline text-3xl font-bold tracking-tight sm:text-4xl">
-          What Our vCISO Delivers
+          Key Areas of Engagement
         </h2>
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {vCisoDeliverables.map((pillar) => (
@@ -79,15 +95,35 @@ export default function VirtualCisoPage() {
         </div>
       </section>
 
+       <section className="mt-20">
+        <h2 className="text-center font-headline text-3xl font-bold tracking-tight sm:text-4xl">
+          Frequently Asked Questions
+        </h2>
+        <div className="mx-auto mt-12 max-w-3xl">
+          <Accordion type="single" collapsible className="w-full">
+            {faqItems.map((item, i) => (
+                <AccordionItem value={`item-${i}`} key={i}>
+                    <AccordionTrigger className="text-left font-headline text-lg hover:text-accent">
+                        {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                        {item.answer}
+                    </AccordionContent>
+                </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       <section className="mt-10 text-center">
         <Card className="mx-auto max-w-2xl bg-primary/5">
           <CardHeader>
-            <CardTitle className="font-headline text-2xl text-accent">Ready for Strategic Security Leadership?</CardTitle>
+            <CardTitle className="font-headline text-2xl text-accent">Get Enterprise-Grade Security Leadership</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground">Don’t wait until a breach escalates. Contact us now to learn how our vCISO service can help you build a resilient and compliant security program.</p>
+            <p className="text-muted-foreground">Don’t wait until a breach escalates. Schedule a vCISO consultation today to see how our experts can help you build a resilient and compliant security program.</p>
             <Button size="lg" asChild className="mt-6">
-              <Link href="/contact">Contact Us Now</Link>
+              <Link href="/contact">Schedule a Consultation</Link>
             </Button>
           </CardContent>
         </Card>
