@@ -64,6 +64,7 @@ export const pricingPlans = [
     price: 79,
     features: ['Basic monitoring', 'Quarterly breach check', 'Dark web alerts for 5 emails'],
     cta: 'Get Personal Plan',
+    href: '/pricing/personal',
   },
   {
     name: 'SMB',

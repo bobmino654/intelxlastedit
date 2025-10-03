@@ -10,9 +10,10 @@ type PricingCardProps = {
   features: string[];
   cta: string;
   popular?: boolean;
+  href?: string;
 };
 
-export function PricingCard({ name, price, features, cta, popular = false }: PricingCardProps) {
+export function PricingCard({ name, price, features, cta, popular = false, href = '/contact' }: PricingCardProps) {
   return (
     <Card className={cn(
       'transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/20',
@@ -42,7 +43,7 @@ export function PricingCard({ name, price, features, cta, popular = false }: Pri
       </CardContent>
       <CardFooter>
         <Button asChild className="w-full" size="lg" variant={popular ? 'default' : 'secondary'}>
-          <Link href="/contact">{cta}</Link>
+          <Link href={href}>{cta}</Link>
         </Button>
       </CardFooter>
     </Card>
