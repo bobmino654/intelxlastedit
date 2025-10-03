@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description: 'Explore our comprehensive suite of cybersecurity services, from penetration testing to managed security.',
 };
 
+const serviceLinks: Record<string, string> = {
+    'Penetration Testing': '/services/penetration-testing',
+};
+
+
 export default function ServicesPage() {
   return (
     <div className="container py-12 md:py-20">
@@ -34,7 +39,7 @@ export default function ServicesPage() {
               </CardHeader>
               <CardFooter>
                  <Button variant="link" asChild className="p-0 text-accent">
-                    <Link href="/contact">Learn More &rarr;</Link>
+                    <Link href={serviceLinks[service.title] || '/contact'}>Learn More &rarr;</Link>
                  </Button>
               </CardFooter>
             </Card>
