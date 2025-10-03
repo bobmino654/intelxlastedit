@@ -15,7 +15,7 @@ export function Footer() {
               Protecting Your Digital Future Today.
             </p>
             <div className="mt-4 flex space-x-4">
-              <Link href="https://x.com/Intelx360" aria-label="Twitter">
+              <Link href="https://x.com/IntelX360" aria-label="Twitter">
                 <Twitter className="h-6 w-6 text-muted-foreground transition-colors hover:text-accent" />
               </Link>
               <Link href="https://www.linkedin.com/company/intelx360" aria-label="LinkedIn">
@@ -43,7 +43,7 @@ export function Footer() {
               <h3 className="font-headline font-semibold">Legal</h3>
               <ul className="mt-4 space-y-2">
                 <li><Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-accent">Privacy Policy</Link></li>
-                <li><Link href="#" className="text-sm text-muted-foreground hover:text-accent">Terms of Service</Link></li>
+                <li><Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-accent">Terms of Service</Link></li>
               </ul>
             </div>
             <div>
