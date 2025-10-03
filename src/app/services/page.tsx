@@ -13,6 +13,7 @@ const serviceLinks: Record<string, string> = {
     'Penetration Testing': '/services/penetration-testing',
     'Threat Intelligence': '/services/threat-intelligence',
     'Incident Response': '/services/incident-response',
+    'Managed Security (MSSP)': '/services/managed-security',
 };
 
 
