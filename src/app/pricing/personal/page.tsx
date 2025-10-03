@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Check, Shield, HeartHand, Lock, Users, Zap } from 'lucide-react';
+import { Check, Shield, HeartHandshake, Lock, Users, Zap } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -36,7 +36,7 @@ const trustPoints = [
 const whyChooseUsPoints = [
     { icon: Lock, text: 'We protect what matters most – your family, your privacy, and your digital life.' },
     { icon: Users, text: 'Family-focused solutions – designed to safeguard every member of your household.' },
-    { icon: HeartHand, text: 'Flexible and affordable – one-time services, monthly subscriptions, or lifetime packages.' },
+    { icon: HeartHandshake, text: 'Flexible and affordable – one-time services, monthly subscriptions, or lifetime packages.' },
     { icon: Shield, text: 'Proactive protection – we track threats like stolen credentials and online scams before they cause damage.' },
     { icon: Zap, text: 'Fast, friendly support – expert guidance without technical jargon.' },
 ];
