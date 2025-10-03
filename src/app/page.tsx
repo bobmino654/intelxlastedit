@@ -4,12 +4,14 @@ import { PricingTeaser } from '@/components/home/pricing-teaser';
 import { DarkWebScanForm } from '@/components/home/dark-web-scan-form';
 import { TestimonialsCarousel } from '@/components/home/testimonials-carousel';
 import { Separator } from '@/components/ui/separator';
+import { PartnerBanner } from '@/components/home/partner-banner';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <ServicesOverview />
+      <PartnerBanner />
       <PricingTeaser />
       <section className="bg-card py-20 sm:py-24">
         <div className="container">
