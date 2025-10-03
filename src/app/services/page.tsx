@@ -19,6 +19,7 @@ const serviceLinks: Record<string, string> = {
     'Cloud Security': '/services/cloud-security',
     'Attack Surface Management (ASM)': '/services/attack-surface-management',
     'Brand Protection': '/services/brand-protection',
+    'Supply Chain Threat Intelligence': '/services/supply-chain-threat-intelligence',
 };
 
 
