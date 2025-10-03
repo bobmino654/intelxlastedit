@@ -1,10 +1,8 @@
-import { AwsLogo } from '../logos/aws';
 import { BitdefenderLogo } from '../logos/bitdefender';
 import { AcronisLogo } from '../logos/acronis';
 import { ElasticLogo } from '../logos/elastic';
 
 const partners = [
-  { name: 'AWS', logo: AwsLogo },
   { name: 'Bitdefender', logo: BitdefenderLogo },
   { name: 'Acronis', logo: AcronisLogo },
   { name: 'Elastic', logo: ElasticLogo },
@@ -20,7 +18,7 @@ export function PartnerBanner() {
         <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
           We collaborate with global technology leaders to deliver best-in-class solutions.
         </p>
-        <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 items-center justify-items-center gap-x-8 gap-y-10 sm:grid-cols-3">
           {partners.map((partner) => (
             <div
               key={partner.name}
