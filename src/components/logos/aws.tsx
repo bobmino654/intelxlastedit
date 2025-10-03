@@ -1,38 +1,21 @@
 export function AwsLogo({ className }: { className?: string }) {
     return (
-      <svg
-        className={className}
-        viewBox="0 0 200 180"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-label="AWS Partner Advanced Tier Services Logo"
-      >
-        <defs>
-          <style>
-            {`
-              .aws-partner-text {
-                font-family: Arial, sans-serif;
-                font-weight: bold;
-                fill: #232F3E;
-              }
-            `}
-          </style>
-        </defs>
-        <path d="M20,10 L180,10 L180,150 L100,170 L20,150 Z" fill="#FFFFFF"/>
-        <path d="M20,10 L180,10 L180,150 L100,170 L20,150 Z" stroke="#232F3E" strokeWidth="3" fill="none"/>
-        
-        {/* AWS Logo */}
-        <path d="M50,45 C50,40 55,35 60,35 L90,35 C95,35 100,40 100,45" fill="none" stroke="#FF9900" strokeWidth="5"/>
-        <path d="M55,50 L95,50" fill="none" stroke="#232F3E" strokeWidth="5"/>
-        <text x="50" y="30" fontSize="18" fill="#232F3E" fontFamily="Arial, sans-serif" fontWeight="bold">aws</text>
-        <path d="M65,55 Q80,70 95,55" fill="none" stroke="#FF9900" strokeWidth="6"/>
-
-        {/* PARTNER Text */}
-        <text x="100" y="95" textAnchor="middle" fontSize="28" className="aws-partner-text">PARTNER</text>
-        
-        {/* Advanced Tier Services Text */}
-        <text x="100" y="120" textAnchor="middle" fontSize="16" className="aws-partner-text">Advanced Tier</text>
-        <text x="100" y="140" textAnchor="middle" fontSize="16" className="aws-partner-text">Services</text>
-      </svg>
+        <svg
+            className={className}
+            viewBox="0 0 180 108"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="AWS Logo"
+        >
+            <g fill="none" fillRule="evenodd">
+                <path
+                    d="M37.71 52.895h5.313v12.28h-5.313v-12.28zm11.39 6.136c0-1.84 1.487-3.33 3.328-3.33a3.32 3.32 0 013.327 3.33c0 1.84-1.486 3.328-3.327 3.328a3.32 3.32 0 01-3.328-3.328zm-5.635-3.35c0-4.945 4.01-8.953 8.962-8.953 4.95 0 8.96 4.008 8.96 8.953 0 4.945-4.01 8.953-8.96 8.953-4.952 0-8.962-4.008-8.962-8.953zm27.844-6.116h5.313v18.73h-5.313V49.565zm11.39 8.796c0-1.84 1.487-3.33 3.328-3.33a3.32 3.32 0 013.327 3.33c0 1.84-1.486 3.328-3.327 3.328a3.32 3.32 0 01-3.328-3.328zm-5.635-3.35c0-4.945 4.01-8.953 8.962-8.953 4.95 0 8.96 4.008 8.96 8.953 0 4.945-4.01 8.953-8.96 8.953-4.952 0-8.962-4.008-8.962-8.953zm27.844-5.446h5.313v18.73h-5.313V52.74zm-64.84 29.585c-4.482 0-8.22-1.748-11.205-4.63l3.75-3.76c2.182 2.05 5.05 3.31 8.27 3.31 4.54 0 7.41-2.45 7.41-5.91V34h5.313v34.45c0 6.64-4.22 11.16-11.538 11.16zm23.95-31.95V34h5.312v16.38h.184c1.81-3.2 4.962-5.18 8.657-5.18 6.425 0 11.01 4.7 11.01 11.54V82.33h-5.313V59.07c0-4.04-2.82-7.07-7-7.07-3.5 0-6.19 2.58-7.14 5.92v24.41h-5.71zm34.25-2.07c-3.11 0-5.42 2.45-5.42 5.48v19.4h-5.313V57.1c0-5.83-4.01-9.8-9.75-9.8-5.36 0-8.93 3.53-8.93 8.79V82.33h-5.313V56.01c0-5.83-4.01-9.8-9.75-9.8-5.26 0-9.05 3.23-9.05 8.76V82.33h-5.313V49.56h5.313v3.91h.187c1.9-2.98 5.16-4.65 8.52-4.65 4.31 0 7.46 2.38 9.32 5.93h.188c2.25-3.66 5.6-5.93 9.77-5.93 4.34 0 7.55 2.32 9.42 5.93h.187c2.28-3.77 5.86-5.93 10.19-5.93 5.42 0 9.25 3.53 9.25 8.79V82.33h-5.312V57.1c0-3.03-2.31-5.48-5.42-5.48z"
+                    fill="#252F3E"
+                ></path>
+                <path
+                    d="M123.54 62.992c10.82-4.02 17.41-1.4 19.82 4.63 2.12 5.31-.21 11.7-10.4 16.32-10.61 4.84-21.23 2.8-24.25-4.22-2.73-6.52 1.3-13.63 12.33-18.73zm-.47 4.23c-8.48 4.22-11.2 9.5-9.07 13.9 2.12 4.42 8.58 6.02 17.06 1.8 8.48-4.22 11.2-9.5 9.08-13.9-2.13-4.42-8.59-6.02-17.07-1.8z"
+                    fill="#FF9900"
+                ></path>
+            </g>
+        </svg>
     );
-  }
-  
+}
