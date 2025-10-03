@@ -1,3 +1,4 @@
+
 import { Metadata } from 'next';
 import { allServices } from '@/lib/data';
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
@@ -17,6 +18,7 @@ const serviceLinks: Record<string, string> = {
     'Virtual CISO (vCISO)': '/services/virtual-ciso',
     'Cloud Security': '/services/cloud-security',
     'Attack Surface Management (ASM)': '/services/attack-surface-management',
+    'Brand Protection': '/services/brand-protection',
 };
 
 
