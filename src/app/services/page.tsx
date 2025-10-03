@@ -14,6 +14,7 @@ const serviceLinks: Record<string, string> = {
     'Threat Intelligence': '/services/threat-intelligence',
     'Incident Response': '/services/incident-response',
     'Managed Security (MSSP)': '/services/managed-security',
+    'Virtual CISO (vCISO)': '/services/virtual-ciso',
 };
 
 
