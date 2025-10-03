@@ -2,39 +2,36 @@ export function AwsLogo({ className }: { className?: string }) {
     return (
       <svg
         className={className}
-        viewBox="0 0 128 128"
-        fill="none"
+        viewBox="0 0 200 180"
         xmlns="http://www.w3.org/2000/svg"
-        aria-label="AWS Logo"
+        aria-label="AWS Partner Advanced Tier Services Logo"
       >
-        <path
-          d="M26.287 75.762L16 79.462V48.537L26.287 52.237V75.762Z"
-          fill="#fff"
-        ></path>
-        <path
-          d="M30.412 73.612L40.7 77.312V26L30.412 29.7V73.612Z"
-          fill="#fff"
-        ></path>
-        <path
-          d="M57.913 77.962L44.825 73.937L55.575 22L68.663 26.025L57.913 77.962Z"
-          fill="#fff"
-        ></path>
-        <path
-          d="M72.937 26.025L83.687 22L94.437 73.937L81.35 77.962L72.937 26.025Z"
-          fill="#fff"
-        ></path>
-        <path
-          d="M98.563 29.7V73.612L108.85 77.312V26L98.563 29.7Z"
-          fill="#fff"
-        ></path>
-        <path
-          d="M113.15 79.462L102.863 75.762V52.237L113.15 48.537V79.462Z"
-          fill="#fff"
-        ></path>
-        <path
-          d="M64 100.868C58.334 100.868 53.056 98.98 48.966 95.66C44.876 92.34 42.221 87.828 41.385 82.723L49.957 81.385C50.485 84.773 52.254 87.618 54.891 89.479C57.528 91.34 60.627 92.41 64 92.41C68.966 92.41 72.863 90.755 75.059 87.618C77.255 84.481 78.113 80.651 77.369 76.433L64.863 69.865L77.951 63.297C80.371 65.568 81.986 68.31 82.524 71.348L91.22 69.865C89.565 64.032 86.113 59.32 81.35 56.402C76.588 53.484 70.627 52.237 64 52.237C58.878 52.237 54.296 53.414 50.723 55.685C47.15 57.956 44.809 61.125 43.963 64.955L35.267 63.472C37.036 56.402 41.221 50.794 47.248 47.162C53.275 43.53 60.106 41.986 67.433 42.844C73.46 43.503 78.839 45.699 83.024 49.171C87.209 52.643 89.658 57.062 89.922 61.947C90.186 66.832 88.531 71.348 85.346 74.888C82.161 78.428 77.742 80.699 72.637 81.385L85.211 88.087L69.361 97.584C67.638 99.668 65.651 100.868 64 100.868Z"
-          fill="#FF9900"
-        ></path>
+        <defs>
+          <style>
+            {`
+              .aws-partner-text {
+                font-family: Arial, sans-serif;
+                font-weight: bold;
+                fill: #232F3E;
+              }
+            `}
+          </style>
+        </defs>
+        <path d="M20,10 L180,10 L180,150 L100,170 L20,150 Z" fill="#FFFFFF"/>
+        <path d="M20,10 L180,10 L180,150 L100,170 L20,150 Z" stroke="#232F3E" strokeWidth="3" fill="none"/>
+        
+        {/* AWS Logo */}
+        <path d="M50,45 C50,40 55,35 60,35 L90,35 C95,35 100,40 100,45" fill="none" stroke="#FF9900" strokeWidth="5"/>
+        <path d="M55,50 L95,50" fill="none" stroke="#232F3E" strokeWidth="5"/>
+        <text x="50" y="30" fontSize="18" fill="#232F3E" fontFamily="Arial, sans-serif" fontWeight="bold">aws</text>
+        <path d="M65,55 Q80,70 95,55" fill="none" stroke="#FF9900" strokeWidth="6"/>
+
+        {/* PARTNER Text */}
+        <text x="100" y="95" textAnchor="middle" fontSize="28" className="aws-partner-text">PARTNER</text>
+        
+        {/* Advanced Tier Services Text */}
+        <text x="100" y="120" textAnchor="middle" fontSize="16" className="aws-partner-text">Advanced Tier</text>
+        <text x="100" y="140" textAnchor="middle" fontSize="16" className="aws-partner-text">Services</text>
       </svg>
     );
   }
