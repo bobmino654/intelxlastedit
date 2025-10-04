@@ -72,6 +72,7 @@ export const pricingPlans = [
     features: ['Full Attack Surface Management', 'Threat intelligence feeds', 'Incident response support (8 hours)', '24/7 Monitoring'],
     cta: 'Get SMB Plan',
     popular: true,
+    href: '/pricing/smb',
   },
   {
     name: 'Enterprise',
