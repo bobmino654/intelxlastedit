@@ -11,7 +11,8 @@ export const metadata: Metadata = {
     default: 'IntelX360 | Cybersecurity, Threat Intelligence & Managed Security',
     template: '%s | IntelX360',
   },
-  description: 'Protect your business with IntelX360. Cyber threat intelligence, SOC-as-a-Service, penetration testing, and incident response for SMBs & enterprises.',
+  description: 'IntelX360 helps organizations stay ahead of cyber threats with penetration testing, SOC-as-a-Service, incident response, threat intelligence, and vCISO services. Trusted cybersecurity partner for SMBs and enterprises.',
+  keywords: 'cybersecurity services, threat intelligence, SOC as a Service, penetration testing, incident response, dark web monitoring, vCISO, compliance audits, digital risk protection, enterprise cybersecurity',
   openGraph: {
     title: 'IntelX360 | Cybersecurity, Threat Intelligence & Managed Security',
     description: 'Protecting Your Digital Future Today.',
