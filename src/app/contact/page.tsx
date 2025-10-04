@@ -6,7 +6,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact IntelX360 | Cybersecurity Consultation & Support',
-  description: 'Reach IntelX360 for tailored cybersecurity solutions. Get expert guidance, incident response, and ongoing protection for your business.',
+  description: 'Get in touch with IntelX360 for cybersecurity consulting, incident response, penetration testing, and managed security solutions. Serving clients worldwide with 24/7 support.',
+  keywords: 'contact IntelX360, cybersecurity support, incident response contact, SOC services contact, threat intelligence consulting, cybersecurity company Egypt, global cybersecurity contact',
 };
 
 export default function ContactPage() {
