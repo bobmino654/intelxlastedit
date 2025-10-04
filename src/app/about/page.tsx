@@ -7,7 +7,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export const metadata: Metadata = {
   title: 'About IntelX360 | 20+ Years of Cybersecurity Expertise',
-  description: 'IntelX360 delivers cutting-edge threat intelligence and managed cybersecurity services, led by 20+ years of global cyber defense expertise.',
+  description: 'IntelX360 is a cybersecurity firm dedicated to protecting organizations against evolving cyber threats. Led by senior threat intelligence analysts, we deliver advanced SOC, incident response, and global threat monitoring solutions.',
+  keywords: 'about IntelX360, cybersecurity experts, threat intelligence leaders, SOC experts, cybersecurity consulting, digital risk protection, global cybersecurity company',
 };
 
 export default function AboutPage() {
