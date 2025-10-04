@@ -1,15 +1,25 @@
 import Image from 'next/image';
-import { Metadata } from 'next';
+import { getTranslator } from 'next-intl/server';
+import type { Metadata } from 'next';
 import { teamMembers } from '@/lib/data';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
-export const metadata: Metadata = {
-  title: 'About IntelX360 | 20+ Years of Cybersecurity Expertise',
-  description: 'IntelX360 is a cybersecurity firm dedicated to protecting organizations against evolving cyber threats. Led by senior threat intelligence analysts, we deliver advanced SOC, incident response, and global threat monitoring solutions.',
-  keywords: 'about IntelX360, cybersecurity experts, threat intelligence leaders, SOC experts, cybersecurity consulting, digital risk protection, global cybersecurity company',
+type Props = {
+  params: {locale: string};
 };
+
+export async function generateMetadata({params: {locale}}: Props): Promise<Metadata> {
+  const t = await getTranslator(locale, 'AboutPage');
+ 
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: 'about IntelX360, cybersecurity experts, threat intelligence leaders, SOC experts, cybersecurity consulting, digital risk protection, global cybersecurity company',
+  };
+}
+
 
 export default function AboutPage() {
   return (

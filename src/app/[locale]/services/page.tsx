@@ -1,15 +1,24 @@
 
-import { Metadata } from 'next';
+import { getTranslator } from 'next-intl/server';
+import type { Metadata } from 'next';
 import { allServices } from '@/lib/data';
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Cybersecurity Services | IntelX360 Threat Intelligence & Protection',
-  description: 'Explore IntelX360’s full suite of cybersecurity services: penetration testing, digital forensics, SOC-as-a-Service, threat intelligence, compliance audits, cloud security, and AI security solutions.',
-  keywords: 'penetration testing, red teaming, threat intelligence, SOC services, incident response, forensic analysis, compliance security, cloud security, AI security, digital brand protection',
+type Props = {
+  params: {locale: string};
 };
+
+export async function generateMetadata({params: {locale}}: Props): Promise<Metadata> {
+  const t = await getTranslator(locale, 'ServicesPage');
+ 
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: 'penetration testing, red teaming, threat intelligence, SOC services, incident response, forensic analysis, compliance security, cloud security, AI security, digital brand protection',
+  };
+}
 
 const serviceLinks: Record<string, string> = {
     'Penetration Testing': '/services/penetration-testing',

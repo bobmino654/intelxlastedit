@@ -1,15 +1,24 @@
 
-import { Metadata } from 'next';
+import { getTranslator } from 'next-intl/server';
+import type { Metadata } from 'next';
 import { PricingCard } from '@/components/pricing-card';
 import { pricingPlans } from '@/lib/data';
 import { Check, ShieldCheck, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-export const metadata: Metadata = {
-  title: 'IntelX360 Pricing | Flexible Cybersecurity Plans for SMBs & Enterprises',
-  description: 'Affordable cybersecurity solutions for every scale. IntelX360 offers flexible pricing plans for individuals, SMBs, and enterprises including monitoring, threat intelligence, incident response, and brand protection.',
-  keywords: 'cybersecurity pricing, SOC pricing, penetration testing cost, threat intelligence subscription, managed security services, SMB cybersecurity packages, enterprise cybersecurity pricing',
+type Props = {
+  params: {locale: string};
 };
+
+export async function generateMetadata({params: {locale}}: Props): Promise<Metadata> {
+  const t = await getTranslator(locale, 'PricingPage');
+ 
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: 'cybersecurity pricing, SOC pricing, penetration testing cost, threat intelligence subscription, managed security services, SMB cybersecurity packages, enterprise cybersecurity pricing',
+  };
+}
 
 const whyChooseUs = [
     { text: 'Scalable protection – From personal identity security to enterprise SOC-level monitoring.' },

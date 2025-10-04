@@ -33,6 +33,14 @@
     --ring: 45 65% 52%;
     
     --radius: 0.5rem;
+
+    --font-body: 'PT Sans';
+    --font-headline: 'Poppins';
+  }
+ 
+  html[lang="ar"] {
+    --font-body: 'Tajawal';
+    --font-headline: 'Tajawal';
   }
 
   .dark {

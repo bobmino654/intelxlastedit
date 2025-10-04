@@ -1,0 +1,22 @@
+{
+  "HomePage": {
+    "title": "IntelX360 | Cybersecurity, Threat Intelligence & Managed Security",
+    "description": "IntelX360 helps organizations stay ahead of cyber threats with penetration testing, SOC-as-a-Service, incident response, threat intelligence, and vCISO services. Trusted cybersecurity partner for SMBs and enterprises."
+  },
+  "AboutPage": {
+    "title": "About IntelX360 | 20+ Years of Cybersecurity Expertise",
+    "description": "IntelX360 is a cybersecurity firm dedicated to protecting organizations against evolving cyber threats. Led by senior threat intelligence analysts, we deliver advanced SOC, incident response, and global threat monitoring solutions."
+  },
+  "ServicesPage": {
+    "title": "Cybersecurity Services | IntelX360 Threat Intelligence & Protection",
+    "description": "Explore IntelX360’s full suite of cybersecurity services: penetration testing, digital forensics, SOC-as-a-Service, threat intelligence, compliance audits, cloud security, and AI security solutions."
+  },
+  "PricingPage": {
+    "title": "IntelX360 Pricing | Flexible Cybersecurity Plans for SMBs & Enterprises",
+    "description": "Affordable cybersecurity solutions for every scale. IntelX360 offers flexible pricing plans for individuals, SMBs, and enterprises including monitoring, threat intelligence, incident response, and brand protection."
+  },
+  "ContactPage": {
+    "title": "Contact IntelX360 | Cybersecurity Consultation & Support",
+    "description": "Get in touch with IntelX360 for cybersecurity consulting, incident response, penetration testing, and managed security solutions. Serving clients worldwide with 24/7 support."
+  }
+}

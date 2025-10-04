@@ -2,13 +2,22 @@ import { contactDetails } from '@/lib/data';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { placeholderImages } from '@/lib/placeholder-images';
-import { Metadata } from 'next';
+import { getTranslator } from 'next-intl/server';
+import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Contact IntelX360 | Cybersecurity Consultation & Support',
-  description: 'Get in touch with IntelX360 for cybersecurity consulting, incident response, penetration testing, and managed security solutions. Serving clients worldwide with 24/7 support.',
-  keywords: 'contact IntelX360, cybersecurity support, incident response contact, SOC services contact, threat intelligence consulting, cybersecurity company Egypt, global cybersecurity contact',
+type Props = {
+  params: {locale: string};
 };
+
+export async function generateMetadata({params: {locale}}: Props): Promise<Metadata> {
+  const t = await getTranslator(locale, 'ContactPage');
+ 
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: 'contact IntelX360, cybersecurity support, incident response contact, SOC services contact, threat intelligence consulting, cybersecurity company Egypt, global cybersecurity contact',
+  };
+}
 
 export default function ContactPage() {
   const mapImage = placeholderImages.find(p => p.id === 'map');
