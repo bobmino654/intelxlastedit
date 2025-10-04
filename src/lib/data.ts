@@ -79,6 +79,7 @@ export const pricingPlans = [
     price: 4000,
     features: ['Global threat intelligence', 'Dedicated security analyst', 'Managed incident response', 'Full brand protection', 'Compliance reporting'],
     cta: 'Contact Sales',
+    href: '/pricing/enterprise',
   },
 ];
 
