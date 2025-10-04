@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import { allServices } from '@/lib/data';
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';

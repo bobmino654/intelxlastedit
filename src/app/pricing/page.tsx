@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import { PricingCard } from '@/components/pricing-card';
 import { pricingPlans } from '@/lib/data';
