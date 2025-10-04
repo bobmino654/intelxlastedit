@@ -7,7 +7,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Cybersecurity Services | IntelX360 Threat Intelligence & Protection',
-  description: 'Explore IntelX360 services: penetration testing, SOC-as-a-Service, vCISO, cloud security, compliance audits, and digital brand protection.',
+  description: 'Explore IntelX360’s full suite of cybersecurity services: penetration testing, digital forensics, SOC-as-a-Service, threat intelligence, compliance audits, cloud security, and AI security solutions.',
+  keywords: 'penetration testing, red teaming, threat intelligence, SOC services, incident response, forensic analysis, compliance security, cloud security, AI security, digital brand protection',
 };
 
 const serviceLinks: Record<string, string> = {
