@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn about IntelX360\'s mission, vision, and the expert team dedicated to protecting your digital future.',
+  title: 'About IntelX360 | 20+ Years of Cybersecurity Expertise',
+  description: 'IntelX360 delivers cutting-edge threat intelligence and managed cybersecurity services, led by 20+ years of global cyber defense expertise.',
 };
 
 export default function AboutPage() {
