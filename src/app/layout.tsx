@@ -8,12 +8,12 @@ import { Footer } from '@/components/layout/footer';
 export const metadata: Metadata = {
   metadataBase: new URL('https://intelx360.com'),
   title: {
-    default: 'IntelX360 Cybersecurity Solutions',
-    template: '%s | IntelX360 Cybersecurity Solutions',
+    default: 'IntelX360 | Cybersecurity, Threat Intelligence & Managed Security',
+    template: '%s | IntelX360',
   },
-  description: 'Protecting organizations worldwide by delivering actionable cyber intelligence and security solutions.',
+  description: 'Protect your business with IntelX360. Cyber threat intelligence, SOC-as-a-Service, penetration testing, and incident response for SMBs & enterprises.',
   openGraph: {
-    title: 'IntelX360 Cybersecurity Solutions',
+    title: 'IntelX360 | Cybersecurity, Threat Intelligence & Managed Security',
     description: 'Protecting Your Digital Future Today.',
     url: 'https://intelx360.com',
     siteName: 'IntelX360 Cybersecurity Solutions',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IntelX360 Cybersecurity Solutions',
+    title: 'IntelX360 | Cybersecurity, Threat Intelligence & Managed Security',
     description: 'Advanced threat intelligence and digital risk protection.',
     images: ['/og-image.png'], // To be created
   },
