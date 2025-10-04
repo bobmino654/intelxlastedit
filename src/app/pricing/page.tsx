@@ -1,3 +1,4 @@
+
 import { Metadata } from 'next';
 import { PricingCard } from '@/components/pricing-card';
 import { pricingPlans } from '@/lib/data';
@@ -5,8 +6,8 @@ import { Check, ShieldCheck, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-  title: 'Pricing Plans',
-  description: 'Find the right IntelX360 cybersecurity plan for your needs, from personal protection to enterprise-grade solutions.',
+  title: 'IntelX360 Pricing | Flexible Cybersecurity Plans for SMBs & Enterprises',
+  description: 'Affordable cybersecurity packages for individuals, small businesses, and enterprises. Threat intelligence, monitoring, incident response, and SOC services.',
 };
 
 const whyChooseUs = [
