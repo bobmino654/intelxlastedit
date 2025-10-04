@@ -8,7 +8,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://intelx360.com'),
+  metadataBase: new URL('https://www.intelx360.com'),
   title: {
     default: 'IntelX360 | Cybersecurity, Threat Intelligence & Managed Security',
     template: '%s | IntelX360',
@@ -62,6 +62,15 @@ export default function RootLayout({
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-NHGJMMJ9');
+          `}
+        </Script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-JDP1B0H86Y"></Script>
+        <Script id="gtag-init">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JDP1B0H86Y');
           `}
         </Script>
       </head>
