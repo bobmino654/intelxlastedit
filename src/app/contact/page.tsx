@@ -5,8 +5,8 @@ import { placeholderImages } from '@/lib/placeholder-images';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Get in touch with the IntelX360 team. Find our office address, phone number, and email.',
+  title: 'Contact IntelX360 | Cybersecurity Consultation & Support',
+  description: 'Reach IntelX360 for tailored cybersecurity solutions. Get expert guidance, incident response, and ongoing protection for your business.',
 };
 
 export default function ContactPage() {
