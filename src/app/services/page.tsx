@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Our Services',
-  description: 'Explore our comprehensive suite of cybersecurity services, from penetration testing to managed security.',
+  title: 'Cybersecurity Services | IntelX360 Threat Intelligence & Protection',
+  description: 'Explore IntelX360 services: penetration testing, SOC-as-a-Service, vCISO, cloud security, compliance audits, and digital brand protection.',
 };
 
 const serviceLinks: Record<string, string> = {
