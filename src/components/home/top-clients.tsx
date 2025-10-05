@@ -8,6 +8,7 @@ import { CiscoLogo } from '@/components/logos/clients/cisco';
 import { KasperskyLogo } from '@/components/logos/clients/kaspersky';
 import { FortinetLogo } from '@/components/logos/clients/fortinet';
 import { PaloAltoLogo } from '@/components/logos/clients/paloalto';
+import { VfsGlobalLogo } from '@/components/logos/clients/vfsglobal';
 
 const clients = [
   { name: 'Microsoft', logo: MicrosoftLogo },
@@ -16,6 +17,7 @@ const clients = [
   { name: 'Kaspersky', logo: KasperskyLogo },
   { name: 'Fortinet', logo: FortinetLogo },
   { name: 'Palo Alto Networks', logo: PaloAltoLogo },
+  { name: 'VFS Global', logo: VfsGlobalLogo },
 ];
 
 export function TopClients() {
