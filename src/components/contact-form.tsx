@@ -14,6 +14,8 @@ import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import { countries } from '@/lib/countries';
 import { allServices } from '@/lib/data';
+import { db } from '@/lib/firebase';
+import { collection, addDoc } from "firebase/firestore";
 
 const formSchema = z.object({
   email: z.string().email('Please enter a valid email address.'),
@@ -53,18 +55,16 @@ export function ContactForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
+      await addDoc(collection(db, "contacts"), {
+        name: `${values.firstName} ${values.lastName}`,
+        email: values.email,
+        phone: values.phone,
+        company: values.company,
+        location: values.location,
+        service: values.service,
+        message: values.message,
+        submittedAt: new Date(),
       });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Something went wrong');
-      }
       
       toast({
         title: 'Form Submitted Successfully!',
@@ -193,7 +193,7 @@ export function ContactForm() {
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="What do you need assistance with?" />
-                    </SelectTrigger>
+                    </Trigger>
                   </FormControl>
                   <SelectContent>
                     {assistanceOptions.map(option => (

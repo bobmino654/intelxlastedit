@@ -11,11 +11,13 @@ const clients = [
   { name: 'Cisco', logoUrl: '/assets/cisco.png' },
   { name: 'IBM', logoUrl: '/assets/ibm.png' },
   { name: 'Kaspersky', logoUrl: '/assets/kaspersky.png' },
+  { name: 'VFS Global', logoUrl: '/assets/vfsglobal.png' },
+  { name: 'Vodafone', logoUrl: '/assets/vodafone.png' },
 ];
 
 export function TopClients() {
-  // Repeat the clients array to ensure a smooth scrolling effect
-  const repeatedClients = Array(Math.ceil(14 / clients.length)).fill(clients).flat();
+  // Repeat the clients array to ensure a smooth, continuous scrolling effect
+  const repeatedClients = [...clients, ...clients];
 
   return (
     <section className="bg-background py-16 sm:py-20">
@@ -34,14 +36,14 @@ export function TopClients() {
             {repeatedClients.map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
-                className="flex h-20 w-64 items-center justify-center px-8"
+                className="mx-8 flex h-20 w-48 flex-shrink-0 items-center justify-center grayscale transition-all duration-300 hover:grayscale-0"
               >
                 <Image
                   src={client.logoUrl}
-                  alt={client.name}
+                  alt={`${client.name} logo`}
                   width={150}
                   height={40}
-                  className="h-10 w-auto object-contain text-gray-400 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_8px_hsl(var(--accent)/0.5)]"
+                  className="h-10 w-auto object-contain"
                 />
               </div>
             ))}
@@ -59,11 +61,11 @@ export function TopClients() {
             transform: translateX(0);
           }
           to {
-            transform: translateX(-${50 * (clients.length / (repeatedClients.length / 2))}%);
+            transform: translateX(-50%);
           }
         }
         .animate-scroll {
-          animation: scroll 80s linear infinite;
+          animation: scroll 40s linear infinite;
         }
       `}</style>
     </section>
