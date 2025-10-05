@@ -3,13 +3,16 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { VfsGlobalLogo } from '@/components/logos/clients/vfsglobal';
+import { VodafoneLogo } from '@/components/logos/clients/vodafone';
 
 const clients = [
   { name: 'VFS Global', logo: VfsGlobalLogo },
+  { name: 'Vodafone', logo: VodafoneLogo },
 ];
 
 export function TopClients() {
-  const repeatedClients = Array(14).fill(clients[0]);
+  // Repeat the clients array to ensure a smooth scrolling effect
+  const repeatedClients = Array(Math.ceil(14 / clients.length)).fill(clients).flat();
 
   return (
     <section className="bg-background py-16 sm:py-20">
@@ -47,7 +50,7 @@ export function TopClients() {
             transform: translateX(0);
           }
           to {
-            transform: translateX(-50%);
+            transform: translateX(-${50 * (clients.length / (repeatedClients.length / 2))}%);
           }
         }
         .animate-scroll {
