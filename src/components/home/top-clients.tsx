@@ -1,13 +1,16 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { VfsGlobalLogo } from '@/components/logos/clients/vfsglobal';
-import { VodafoneLogo } from '@/components/logos/clients/vodafone';
 
 const clients = [
-  { name: 'VFS Global', logo: VfsGlobalLogo },
-  { name: 'Vodafone', logo: VodafoneLogo },
+  { name: 'Microsoft', logoUrl: '/assets/microsoft.png' },
+  { name: 'Palo Alto Networks', logoUrl: '/assets/paloalto.png' },
+  { name: 'Fortinet', logoUrl: '/assets/fortinet.png' },
+  { name: 'Cisco', logoUrl: '/assets/cisco.png' },
+  { name: 'IBM', logoUrl: '/assets/ibm.png' },
+  { name: 'Kaspersky', logoUrl: '/assets/kaspersky.png' },
 ];
 
 export function TopClients() {
@@ -33,7 +36,13 @@ export function TopClients() {
                 key={`${client.name}-${index}`}
                 className="flex h-20 w-64 items-center justify-center px-8"
               >
-                <client.logo className="h-10 w-auto transform text-gray-400 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_8px_hsl(var(--accent)/0.5)]" />
+                <Image
+                  src={client.logoUrl}
+                  alt={client.name}
+                  width={150}
+                  height={40}
+                  className="h-10 w-auto object-contain text-gray-400 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_8px_hsl(var(--accent)/0.5)]"
+                />
               </div>
             ))}
           </div>
