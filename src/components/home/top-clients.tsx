@@ -2,25 +2,15 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { MicrosoftLogo } from '@/components/logos/clients/microsoft';
-import { IbmLogo } from '@/components/logos/clients/ibm';
-import { CiscoLogo } from '@/components/logos/clients/cisco';
-import { KasperskyLogo } from '@/components/logos/clients/kaspersky';
-import { FortinetLogo } from '@/components/logos/clients/fortinet';
-import { PaloAltoLogo } from '@/components/logos/clients/paloalto';
 import { VfsGlobalLogo } from '@/components/logos/clients/vfsglobal';
 
 const clients = [
-  { name: 'Microsoft', logo: MicrosoftLogo },
-  { name: 'IBM', logo: IbmLogo },
-  { name: 'Cisco', logo: CiscoLogo },
-  { name: 'Kaspersky', logo: KasperskyLogo },
-  { name: 'Fortinet', logo: FortinetLogo },
-  { name: 'Palo Alto Networks', logo: PaloAltoLogo },
   { name: 'VFS Global', logo: VfsGlobalLogo },
 ];
 
 export function TopClients() {
+  const repeatedClients = Array(14).fill(clients[0]);
+
   return (
     <section className="bg-background py-16 sm:py-20">
       <div className="container text-center">
@@ -35,7 +25,7 @@ export function TopClients() {
           }}
         >
           <div className="flex w-max animate-scroll">
-            {[...clients, ...clients].map((client, index) => (
+            {repeatedClients.map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
                 className="flex h-20 w-64 items-center justify-center px-8"
@@ -61,7 +51,7 @@ export function TopClients() {
           }
         }
         .animate-scroll {
-          animation: scroll 40s linear infinite;
+          animation: scroll 80s linear infinite;
         }
       `}</style>
     </section>
