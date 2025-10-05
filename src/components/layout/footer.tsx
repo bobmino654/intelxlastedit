@@ -51,7 +51,7 @@ export function Footer() {
               <address className="mt-4 space-y-2 not-italic text-sm text-muted-foreground">
                 <p>{contactDetails.address}</p>
                 <p>Phone: {contactDetails.phone}</p>
-                <p>Email: {contactDetails.email}</p>
+                <p>Email: {contactDetails.emails.general}</p>
               </address>
             </div>
           </div>

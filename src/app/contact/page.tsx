@@ -36,7 +36,13 @@ export default function ContactPage() {
             <div className="mt-4 space-y-3 text-muted-foreground">
               <p className="flex items-center"><MapPin className="mr-3 h-5 w-5 text-accent" /> {contactDetails.address}</p>
               <p className="flex items-center"><Phone className="mr-3 h-5 w-5 text-accent" /> {contactDetails.phone}</p>
-              <p className="flex items-center"><Mail className="mr-3 h-5 w-5 text-accent" /> {contactDetails.email}</p>
+              <p className="flex items-start">
+                <Mail className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-accent" /> 
+                <span>
+                  General Information: {contactDetails.emails.general}<br/>
+                  Support: {contactDetails.emails.support}
+                </span>
+              </p>
             </div>
           </div>
           {mapImage && (
