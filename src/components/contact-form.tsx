@@ -5,8 +5,6 @@ import { useState } from 'react';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import { app } from '@/lib/firebase';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
@@ -25,12 +23,11 @@ const formSchema = z.object({
   location: z.string().min(1, 'Please select a location.'),
   phone: z.string().min(1, 'Mobile phone number is required.'),
   message: z.string().optional(),
-  assistance: z.string().min(1, 'Please select a service.'),
+  service: z.string().min(1, 'Please select a service.'),
   consent: z.boolean().refine(val => val === true, {
     message: 'You must consent to the marketing terms.',
   }),
-  organization: z.string().optional(),
-  name: z.string().optional(),
+  company: z.string().optional(),
 });
 
 const assistanceOptions = [...allServices.map(service => service.title), 'Other'];
@@ -38,7 +35,6 @@ const assistanceOptions = [...allServices.map(service => service.title), 'Other'
 export function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
-  const db = getFirestore(app);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -49,40 +45,39 @@ export function ContactForm() {
       location: '',
       phone: '',
       message: '',
-      assistance: '',
+      service: '',
       consent: false,
+      company: '',
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     try {
-      // Combine first and last name
-      const fullName = `${values.firstName} ${values.lastName}`;
-      const submissionData = {
-        name: fullName,
-        email: values.email,
-        organization: values.organization || '',
-        phone: values.phone,
-        location: values.location,
-        assistance: values.assistance,
-        message: values.message,
-        createdAt: new Date(),
-      };
-      
-      await addDoc(collection(db, 'contacts'), submissionData);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Something went wrong');
+      }
       
       toast({
         title: 'Form Submitted Successfully!',
         description: 'Thank you for reaching out. We will get back to you shortly.',
       });
       form.reset();
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error submitting form:', error);
       toast({
         variant: 'destructive',
         title: 'Submission Failed',
-        description: 'Something went wrong. Please try again later.',
+        description: error.message || 'Something went wrong. Please try again later.',
       });
     } finally {
       setIsLoading(false);
@@ -151,6 +146,20 @@ export function ContactForm() {
               </FormItem>
             )}
           />
+          
+           <FormField
+            control={form.control}
+            name="company"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Company</FormLabel>
+                <FormControl>
+                  <Input placeholder="Your Company Inc." {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
           <FormField
             control={form.control}
@@ -177,14 +186,14 @@ export function ContactForm() {
 
           <FormField
             control={form.control}
-            name="assistance"
+            name="service"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Service*</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a service" />
+                      <SelectValue placeholder="What do you need assistance with?" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>

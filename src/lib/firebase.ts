@@ -1,4 +1,5 @@
 
+
 // This is a placeholder for your Firebase configuration.
 // Replace the empty strings with your actual Firebase project credentials.
 
