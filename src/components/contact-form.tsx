@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -64,7 +63,7 @@ export function ContactForm() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message || 'Something went wrong');
+        throw new Error(errorData.error || 'Something went wrong');
       }
       
       toast({
