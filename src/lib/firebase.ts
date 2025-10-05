@@ -1,9 +1,10 @@
+
 // This is a placeholder for your Firebase configuration.
 // Replace the empty strings with your actual Firebase project credentials.
 
 import { initializeApp, getApps } from 'firebase/app';
-// import { getFirestore } from 'firebase/firestore';
-// import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "",
@@ -22,8 +23,7 @@ if (!getApps().length) {
   app = getApps()[0];
 }
 
-// const db = getFirestore(app);
-// const auth = getAuth(app);
+const db = getFirestore(app);
+const auth = getAuth(app);
 
-// export { db, auth };
-export { app };
+export { db, auth, app };

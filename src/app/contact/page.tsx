@@ -1,8 +1,10 @@
+
 import { contactDetails } from '@/lib/data';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { placeholderImages } from '@/lib/placeholder-images';
 import type { Metadata } from 'next';
+import { ContactForm } from '@/components/contact-form';
 
 export const metadata: Metadata = {
   title: 'Contact IntelX360 | Cybersecurity Consultation & Support',
@@ -20,12 +22,15 @@ export default function ContactPage() {
           Get in Touch
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
-          Our team is ready to help you secure your organization. Contact us through the details below.
+          Our team is ready to help you secure your organization. Contact us for a consultation or use the form below to let us know how we can assist you.
         </p>
       </section>
 
-      <section className="mt-20 flex justify-center">
-        <div className="w-full max-w-lg space-y-8">
+      <section className="mt-20 grid grid-cols-1 gap-16 md:grid-cols-2">
+        <div>
+          <ContactForm />
+        </div>
+        <div className="space-y-8">
           <div>
             <h3 className="font-headline text-2xl font-bold">Our Office</h3>
             <div className="mt-4 space-y-3 text-muted-foreground">
