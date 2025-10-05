@@ -6,6 +6,7 @@ import { TestimonialsCarousel } from '@/components/home/testimonials-carousel';
 import { Separator } from '@/components/ui/separator';
 import { PartnerBanner } from '@/components/home/partner-banner';
 import type { Metadata } from 'next';
+import { TopClients } from '@/components/home/top-clients';
 
 export const metadata: Metadata = {
   title: 'IntelX360 | Cybersecurity, Threat Intelligence & Managed Security',
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <TopClients />
       <ServicesOverview />
       <PartnerBanner />
       <PricingTeaser />
