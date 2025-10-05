@@ -16,6 +16,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import { countries } from '@/lib/countries';
+import { allServices } from '@/lib/data';
 
 const formSchema = z.object({
   email: z.string().email('Please enter a valid email address.'),
@@ -32,14 +33,7 @@ const formSchema = z.object({
   name: z.string().optional(),
 });
 
-const assistanceOptions = [
-  'Cyber Threat Intelligence',
-  'Attack Surface Management',
-  'Digital Risk Protection',
-  'Penetration Testing',
-  'Incident Response',
-  'Other'
-];
+const assistanceOptions = [...allServices.map(service => service.title), 'Other'];
 
 export function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -186,11 +180,11 @@ export function ContactForm() {
             name="assistance"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>What do you need assistance with?*</FormLabel>
+                <FormLabel>Service*</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Please Select" />
+                      <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
