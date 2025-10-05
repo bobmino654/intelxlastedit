@@ -15,6 +15,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
+import { countries } from '@/lib/countries';
 
 const formSchema = z.object({
   email: z.string().email('Please enter a valid email address.'),
@@ -170,12 +171,9 @@ export function ContactForm() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="us">United States</SelectItem>
-                    <SelectItem value="ca">Canada</SelectItem>
-                    <SelectItem value="uk">United Kingdom</SelectItem>
-                    <SelectItem value="au">Australia</SelectItem>
-                    <SelectItem value="eg">Egypt</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
+                    {countries.map(country => (
+                      <SelectItem key={country.value} value={country.value}>{country.label}</SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
                 <FormMessage />
