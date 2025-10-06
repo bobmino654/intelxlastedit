@@ -24,7 +24,7 @@ export function TopClients() {
         <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
           Trusted by Leading Organizations Worldwide
         </h2>
-        <div className="mt-12 relative overflow-hidden">
+        <div className="mt-12 relative w-full overflow-hidden">
           <div className="animate-scroll-infinite flex w-max gap-16">
             {[...clients, ...clients].map((client, index) => (
               <div
