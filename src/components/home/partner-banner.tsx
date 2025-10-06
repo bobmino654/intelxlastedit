@@ -13,7 +13,6 @@ const partners = [
   { name: 'Elastic', logo: ElasticLogo },
   { name: 'LevelBlue', logo: LevelBlueLogo },
   { name: 'AWS', logo: AwsLogo },
-  { name: 'Sophos', logo: () => <Image src="/assets/sophos.png" alt="Sophos Partner" width={140} height={40} className="h-10 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110" /> },
 ];
 
 export function PartnerBanner() {
