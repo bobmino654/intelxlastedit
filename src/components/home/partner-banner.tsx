@@ -1,9 +1,12 @@
+
 import { BitdefenderLogo } from '../logos/bitdefender';
 import { AcronisLogo } from '../logos/acronis';
 import { ElasticLogo } from '../logos/elastic';
 import { LevelBlueLogo } from '../logos/levelblue';
 import Image from 'next/image';
 import { AwsLogo } from '../logos/aws';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 const partners = [
   { name: 'Bitdefender', logo: BitdefenderLogo },
@@ -11,6 +14,7 @@ const partners = [
   { name: 'Elastic', logo: ElasticLogo },
   { name: 'LevelBlue', logo: LevelBlueLogo },
   { name: 'AWS', logo: AwsLogo },
+  { name: 'Sophos', logo: () => <Image src="/assets/sophos.png" alt="Sophos Partner" width={140} height={40} className="h-10 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110" /> },
 ];
 
 export function PartnerBanner() {
@@ -23,21 +27,24 @@ export function PartnerBanner() {
         <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
           We collaborate with global technology leaders to deliver best-in-class solutions.
         </p>
-        <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-x-16 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
-          {partners.map((partner) => (
-            <div
-              key={partner.name}
-              className="transform transition-transform duration-300 hover:scale-110"
-            >
-              <partner.logo className="h-16 w-auto" />
-            </div>
-          ))}
-          <div
-              key="Sophos"
-              className="flex flex-col items-center justify-center transform transition-transform duration-300 hover:scale-110"
-            >
-             <Image src="/assets/sophos.png" alt="Sophos Silver Partner" width={180} height={48} className="h-12 w-auto" />
+        <div className="relative mt-12 w-full overflow-hidden">
+          <div className="animate-scroll-infinite flex w-max items-center gap-16">
+            {[...partners, ...partners].map((partner, index) => (
+              <div
+                key={`${partner.name}-${index}`}
+                className="group flex-shrink-0"
+              >
+                <partner.logo className="h-16 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110" />
+              </div>
+            ))}
           </div>
+          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent"></div>
+          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent"></div>
+        </div>
+        <div className="mt-16">
+          <Button size="lg" asChild variant="outline">
+            <Link href="/contact">Become a Partner</Link>
+          </Button>
         </div>
       </div>
     </section>
