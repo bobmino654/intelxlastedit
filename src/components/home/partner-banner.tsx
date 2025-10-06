@@ -34,8 +34,7 @@ export function PartnerBanner() {
               key="Sophos"
               className="flex flex-col items-center justify-center transform transition-transform duration-300 hover:scale-110"
             >
-             <Image src="/assets/sophos.png" alt="Sophos Silver Partner" width={140} height={40} className="h-10 w-auto" />
-             <span className="text-sm mt-2 text-muted-foreground">Sophos Silver Partner</span>
+             <Image src="/assets/sophos.png" alt="Sophos Silver Partner" width={180} height={48} className="h-12 w-auto" />
           </div>
         </div>
       </div>
