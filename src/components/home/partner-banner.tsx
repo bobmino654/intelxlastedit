@@ -2,14 +2,13 @@ import { BitdefenderLogo } from '../logos/bitdefender';
 import { AcronisLogo } from '../logos/acronis';
 import { ElasticLogo } from '../logos/elastic';
 import { LevelBlueLogo } from '../logos/levelblue';
-import { SophosLogo } from '../logos/sophos';
+import Image from 'next/image';
 
 const partners = [
   { name: 'Bitdefender', logo: BitdefenderLogo },
   { name: 'Acronis', logo: AcronisLogo },
   { name: 'Elastic', logo: ElasticLogo },
   { name: 'LevelBlue', logo: LevelBlueLogo },
-  { name: 'Sophos', logo: SophosLogo },
 ];
 
 export function PartnerBanner() {
@@ -31,6 +30,12 @@ export function PartnerBanner() {
               <partner.logo className="h-16 w-auto" />
             </div>
           ))}
+          <div
+              key="Sophos"
+              className="transform transition-transform duration-300 hover:scale-110"
+            >
+             <Image src="/assets/sophos.png" alt="Sophos Silver Partner" width={140} height={40} className="h-16 w-auto" />
+          </div>
         </div>
       </div>
     </section>
