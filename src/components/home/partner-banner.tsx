@@ -23,7 +23,7 @@ export function PartnerBanner() {
         <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
           We collaborate with global technology leaders to deliver best-in-class solutions.
         </p>
-        <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-x-16 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
           {partners.map((partner) => (
             <div
               key={partner.name}
