@@ -171,7 +171,7 @@ export function ContactForm() {
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Please Select" />
-                    </SelectTrigger>
+                    </Trigger>
                   </FormControl>
                   <SelectContent>
                     {countries.map(country => (
