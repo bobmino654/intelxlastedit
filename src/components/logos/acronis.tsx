@@ -2,10 +2,26 @@
 export const AcronisLogo = (props: React.SVGProps<SVGSVGElement>) => (
     <svg 
         xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 256 64" 
+        viewBox="0 0 400 100" 
         {...props}
-        fill="currentColor"
     >
-        <path d="M37.1 36.3h-14L15.9 63.4h15.3l1.9-6.3h9.8l4.1 6.3h15.9L45.8 0H30.4l6.7 36.3zm-3.8-6.3L28.9 12l-4.4 18h10.4zM95.2 36.3h-14L74 63.4h15.3l1.9-6.3h9.8l4.1 6.3h15.9L103.9 0H88.5l6.7 36.3zm-3.8-6.3L87 12l-4.4 18h10.4zM153.3 36.3h-14l-7.2 27.1h15.3l1.9-6.3h9.8l4.1 6.3h15.9L168.1 0h-15.4l.1 36.3zm-3.8-6.3l-4.4-18-4.4 18h10.4zM240.1 23.5c0-13-9.5-23.5-22.6-23.5-13.1 0-22.6 10.5-22.6 23.5s9.5 23.5 22.6 23.5c13.1 0 22.6-10.5 22.6-23.5zm-30.1 0c0-5.8 4.2-10.4 9.4-10.4 5.2 0 9.4 4.6 9.4 10.4s-4.2 10.4-9.4 10.4c-5.2 0-9.4-4.7-9.4-10.4z" />
+        <style>
+            {`
+                .acronis-main-text {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 38px;
+                    font-weight: 600;
+                    fill: #2B5178;
+                }
+                .acronis-sub-text {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 36px;
+                    font-weight: 500;
+                    fill: #2D94E9;
+                }
+            `}
+        </style>
+        <text x="0" y="40" className="acronis-main-text">Acronis</text>
+        <text x="0" y="85" className="acronis-sub-text">Authorized Partner</text>
     </svg>
 );
