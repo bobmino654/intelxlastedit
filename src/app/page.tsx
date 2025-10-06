@@ -1,4 +1,5 @@
 import { HeroSection } from '@/components/home/hero-section';
+import { TopClients } from '@/components/home/top-clients';
 import { ServicesOverview } from '@/components/home/services-overview';
 import { PricingTeaser } from '@/components/home/pricing-teaser';
 import { DarkWebScanForm } from '@/components/home/dark-web-scan-form';
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <TopClients />
       <ServicesOverview />
       <PartnerBanner />
       <PricingTeaser />
