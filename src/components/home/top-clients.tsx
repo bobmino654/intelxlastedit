@@ -6,14 +6,14 @@ import { Button } from '@/components/ui/button';
 
 const clients = [
   { name: 'Etisalat', logoUrl: '/assets/etisalat.png' },
-  { name: 'Evergreen', logoUrl: '/assets/evergreen.png' },
+  { name: 'Evergreen', logoUrl: '/assets/evergreen.jpg' },
   { name: 'Orange', logoUrl: '/assets/orange.png' },
   { name: 'VFSGlobal', logoUrl: '/assets/vfsglobal.png' },
   { name: 'Vodafone', logoUrl: '/assets/vodafone.png' },
   { name: 'Coca-Cola', logoUrl: '/assets/cocacola.png' },
   { name: 'Ghibli', logoUrl: '/assets/ghibli.png' },
   { name: 'HSBC', logoUrl: '/assets/hsbc.png' },
-  { name: 'NBK', logoUrl: '/assets/nbk.png' },
+  { name: 'NBK', logoUrl: '/assets/nbk.webp' },
   { name: 'XDEGEMAC', logoUrl: '/assets/xdegemac.png' },
 ];
 
@@ -25,7 +25,7 @@ export function TopClients() {
           Trusted by Leading Organizations Worldwide
         </h2>
         <div className="relative mt-12 w-full overflow-hidden">
-          <div className="animate-scroll-infinite flex w-max gap-16">
+          <div className="animate-scroll-infinite flex w-max items-center gap-16">
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
@@ -35,8 +35,8 @@ export function TopClients() {
                   src={client.logoUrl}
                   alt={`${client.name} logo`}
                   width={140}
-                  height={60}
-                  className="h-14 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110"
+                  height={40}
+                  className="h-10 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110"
                 />
               </div>
             ))}
