@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter, Facebook } from 'lucide-react';
 import { NAV_LINKS } from '@/lib/routes';
 import { Logo } from './logo';
 import { contactDetails } from '@/lib/data';
@@ -23,6 +23,9 @@ export function Footer() {
               </Link>
               <Link href="https://github.com/intelx360" aria-label="GitHub">
                 <Github className="h-6 w-6 text-muted-foreground transition-colors hover:text-accent" />
+              </Link>
+              <Link href="https://www.facebook.com/intelx360" aria-label="Facebook">
+                <Facebook className="h-6 w-6 text-muted-foreground transition-colors hover:text-accent" />
               </Link>
             </div>
           </div>
