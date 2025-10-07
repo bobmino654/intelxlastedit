@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -35,8 +36,8 @@ export function TopClients() {
                   src={client.logoUrl}
                   alt={`${client.name} logo`}
                   width={140}
-                  height={40}
-                  className="h-10 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110"
+                  height={64}
+                  className="h-16 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110"
                 />
               </div>
             ))}
