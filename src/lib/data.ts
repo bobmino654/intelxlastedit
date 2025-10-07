@@ -100,6 +100,12 @@ export const teamMembers = [
     imageId: '2',
   },
   {
+    name: 'AgentX',
+    role: 'Head of Red Team Operations',
+    bio: 'A seasoned red team expert, AgentX leads IntelX360’s offensive security initiatives with precision and innovation. Known for uncovering hidden vulnerabilities and simulating real-world attacks, he ensures IntelX360 stays one step ahead of evolving threats.',
+    imageId: '15',
+  },
+  {
     name: 'Yasmin',
     role: 'Head of Projects',
     bio: 'Orchestrates complex initiatives with precision and vision—turning strategies into impactful results.',
