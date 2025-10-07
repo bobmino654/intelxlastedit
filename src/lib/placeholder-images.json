@@ -93,7 +93,7 @@
     {
       "id": "15",
       "description": "Team member AgentX",
-      "imageUrl": "https://images.unsplash.com/photo-1554034483-74d421945199?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYWNrZXJ8ZW58MHx8fHwxNzYwMjM1MjYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/team/agentx.png",
       "imageHint": "hacker anonymous"
     }
   ]
