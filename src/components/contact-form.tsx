@@ -66,7 +66,19 @@ export function ContactForm() {
         message: values.message,
         submittedAt: new Date(),
       });
-      
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: values.firstName,
+          lastName: values.lastName,
+          email: values.email,
+          phone: values.phone,
+          company: values.company,
+          service: values.service,
+          message: values.message,
+        }),
+      });
       toast({
         title: 'Form Submitted Successfully!',
         description: 'Thank you for reaching out. We will get back to you shortly.',
