@@ -20,7 +20,7 @@ const clients = [
 
 export function TopClients() {
   return (
-    <section className="bg-background py-20 sm:py-24">
+    <section className="bg-white text-background py-20 sm:py-24">
       <div className="container text-center">
         <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
           Trusted by Leading Organizations Worldwide
@@ -42,8 +42,8 @@ export function TopClients() {
               </div>
             ))}
           </div>
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent"></div>
-          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent"></div>
+          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent"></div>
+          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent"></div>
         </div>
         <div className="mt-16">
           <Button size="lg" asChild variant="outline">
