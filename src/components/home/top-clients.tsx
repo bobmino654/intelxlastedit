@@ -9,7 +9,7 @@ const clients = [
   { name: 'Etisalat', logoUrl: '/assets/etisalat.png' },
   { name: 'Evergreen', logoUrl: '/assets/evergreen.jpg' },
   { name: 'Orange', logoUrl: '/assets/orange.png' },
-  { name: 'VFSGlobal', logoUrl: '/assets/vfsg-black.png' },
+  { name: 'VFSGlobal', logoUrl: '/assets/vfsglobal.png' },
   { name: 'Vodafone', logoUrl: '/assets/vodafone.png' },
   { name: 'Coca-Cola', logoUrl: '/assets/cocacola.png' },
   { name: 'Ghibli', logoUrl: '/assets/ghibli.png' },
@@ -54,5 +54,6 @@ export function TopClients() {
     </section>
   );
 }
+
 
 
