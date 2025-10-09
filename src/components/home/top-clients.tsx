@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -15,7 +16,6 @@ const clients = [
   { name: 'HSBC', logoUrl: '/assets/hsbc.png' },
   { name: 'NBK', logoUrl: '/assets/nbk.webp' },
   { name: 'XDEGEMAC', logoUrl: '/assets/xdegemac.png' },
-  { name: 'Papa Johns', logoUrl: '/assets/papajohns.png' },
 ];
 
 export function TopClients() {
