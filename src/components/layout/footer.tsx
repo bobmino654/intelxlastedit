@@ -1,8 +1,18 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Github, Linkedin, Twitter, Facebook } from 'lucide-react';
 import { NAV_LINKS } from '@/lib/routes';
 import { Logo } from './logo';
 import { contactDetails } from '@/lib/data';
+
+const certifications = [
+  { name: 'CEH', logo: '/assets/ceh.png', width: 80, height: 80 },
+  { name: 'CISSP', logo: '/assets/cissp.png', width: 90, height: 80 },
+  { name: 'OSCP', logo: '/assets/oscp.png', width: 80, height: 80 },
+  { name: 'ISO 27001', logo: '/assets/iso27001.png', width: 80, height: 80 },
+  { name: 'SOC 2 Type II', logo: '/assets/soc.png', width: 100, height: 80 },
+];
+
 
 export function Footer() {
   return (
@@ -60,7 +70,30 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-border/40 pt-8 text-center text-sm text-muted-foreground">
+        
+        <div className="my-12 border-t border-border/40"></div>
+
+        <div className="text-center">
+            <h3 className="font-headline text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                Certified • Trusted • Verified
+            </h3>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-8 md:gap-12">
+                {certifications.map((cert) => (
+                    <div key={cert.name} className="transition-transform duration-300 hover:scale-110">
+                        <Image
+                            src={cert.logo}
+                            alt={`${cert.name} Certification`}
+                            width={cert.width}
+                            height={cert.height}
+                            className="object-contain filter grayscale hover:filter-none"
+                            style={{ color: '#d1d5db' }}
+                        />
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <div className="mt-12 border-t border-border/40 pt-8 text-center text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} IntelX360 Cybersecurity Solutions. All rights reserved.
         </div>
       </div>
