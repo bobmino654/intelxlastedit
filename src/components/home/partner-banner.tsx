@@ -1,3 +1,4 @@
+
 import { BitdefenderLogo } from '../logos/bitdefender';
 import { AcronisLogo } from '../logos/acronis';
 import { ElasticLogo } from '../logos/elastic';
@@ -40,11 +41,6 @@ export function PartnerBanner() {
           </div>
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent"></div>
           <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent"></div>
-        </div>
-        <div className="mt-16">
-          <Button size="lg" asChild variant="outline">
-            <Link href="/contact">Become a Partner</Link>
-          </Button>
         </div>
       </div>
     </section>
