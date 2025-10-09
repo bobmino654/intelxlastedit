@@ -9,7 +9,7 @@ const clients = [
   { name: 'Etisalat', logoUrl: '/assets/etisalat.png' },
   { name: 'Evergreen', logoUrl: '/assets/evergreen.jpg' },
   { name: 'Orange', logoUrl: '/assets/orange.png' },
-  { name: 'VFSGlobal', logoUrl: '/assets/vfsglobal.png' },
+  { name: 'VFSGlobal', logoUrl: '/assets/vfsg-black.png' },
   { name: 'Vodafone', logoUrl: '/assets/vodafone.png' },
   { name: 'Coca-Cola', logoUrl: '/assets/cocacola.png' },
   { name: 'Ghibli', logoUrl: '/assets/ghibli.png' },
@@ -30,14 +30,14 @@ export function TopClients() {
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
-                className="group flex-shrink-0"
+                className="group flex-shrink-0 bg-white p-4 rounded-lg"
               >
                 <Image
                   src={client.logoUrl}
                   alt={`${client.name} logo`}
                   width={140}
                   height={64}
-                  className="h-16 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110"
+                  className="h-16 w-auto object-contain transition-all duration-300 group-hover:scale-110"
                 />
               </div>
             ))}
@@ -54,4 +54,5 @@ export function TopClients() {
     </section>
   );
 }
+
 
