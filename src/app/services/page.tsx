@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity Services | IntelX360 Threat Intelligence & Protection',
-  description: 'Explore IntelX360’s full suite of cybersecurity services: penetration testing, digital forensics, SOC-as-a-Service, threat intelligence, compliance audits, cloud security, and AI security solutions.',
-  keywords: 'penetration testing, red teaming, threat intelligence, SOC services, incident response, forensic analysis, compliance security, cloud security, AI security, digital brand protection',
+  title: 'IntelX360 Cybersecurity Services | MSSP, Threat Intelligence & Incident Response',
+  description: 'Explore IntelX360’s complete suite of cybersecurity services, including managed security (MSSP), penetration testing, threat intelligence, incident response, and brand protection.',
+  keywords: 'cybersecurity services, MSSP, penetration testing, incident response, threat intelligence, brand protection, vCISO, cloud security',
 };
 
 const serviceLinks: Record<string, string> = {

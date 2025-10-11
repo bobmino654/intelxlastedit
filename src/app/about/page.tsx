@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { teamMembers } from '@/lib/data';
@@ -6,9 +7,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export const metadata: Metadata = {
-    title: 'About IntelX360 | 20+ Years of Cybersecurity Expertise',
-    description: 'IntelX360 is a cybersecurity firm dedicated to protecting organizations against evolving cyber threats. Led by senior threat intelligence analysts, we deliver advanced SOC, incident response, and global threat monitoring solutions.',
-    keywords: 'about IntelX360, cybersecurity experts, threat intelligence leaders, SOC experts, cybersecurity consulting, digital risk protection, global cybersecurity company',
+    title: 'About IntelX360 | Trusted Cybersecurity Experts & Innovators',
+    description: 'Learn about IntelX360 — a leading cybersecurity company providing proactive defense, intelligence-driven solutions, and dedicated experts protecting global organizations.',
+    keywords: 'about IntelX360, cybersecurity experts, threat intelligence company, cyber defense team, security innovation, cyber consulting',
 };
 
 

@@ -1,3 +1,4 @@
+
 import { HeroSection } from '@/components/home/hero-section';
 import { TopClients } from '@/components/home/top-clients';
 import { ServicesOverview } from '@/components/home/services-overview';
@@ -9,8 +10,9 @@ import { PartnerBanner } from '@/components/home/partner-banner';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'IntelX360 | Cybersecurity, Threat Intelligence & Managed Security',
-  description: 'IntelX360 helps organizations stay ahead of cyber threats with penetration testing, SOC-as-a-Service, incident response, threat intelligence, and vCISO services. Trusted cybersecurity partner for SMBs and enterprises.'
+  title: 'IntelX360 | Comprehensive Cybersecurity Solutions & Threat Intelligence',
+  description: 'Protect your business with IntelX360 — offering world-class cybersecurity, penetration testing, threat intelligence, managed security (MSSP), and cloud protection. Stay ahead of cyber threats today.',
+  keywords: 'cybersecurity services, managed security, penetration testing, threat intelligence, MSSP, cloud security, cyber defense company, IntelX360',
 };
 
 export default function Home() {

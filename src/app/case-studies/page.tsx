@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Metadata } from 'next';
 import { caseStudies } from '@/lib/data';
@@ -6,8 +7,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: 'Case Studies',
-  description: 'Read real-world examples of how IntelX360 helps organizations defend against cyber threats and reduce risk.',
+  title: 'IntelX360 Case Studies | Proven Cybersecurity Success Stories',
+  description: 'See how IntelX360 helped global businesses prevent breaches, detect threats, and strengthen defenses through tailored cybersecurity solutions.',
+  keywords: 'cybersecurity case studies, MSSP success stories, threat response examples, cyber defense case studies, IntelX360 projects',
 };
 
 export default function CaseStudiesPage() {

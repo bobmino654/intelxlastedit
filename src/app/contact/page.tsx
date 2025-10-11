@@ -7,9 +7,9 @@ import type { Metadata } from 'next';
 import { ContactForm } from '@/components/contact-form';
 
 export const metadata: Metadata = {
-  title: 'Contact IntelX360 | Cybersecurity Consultation & Support',
-  description: 'Get in touch with IntelX360 for cybersecurity consulting, incident response, penetration testing, and managed security solutions. Serving clients worldwide with 24/7 support.',
-  keywords: 'contact IntelX360, cybersecurity support, incident response contact, SOC services contact, threat intelligence consulting, cybersecurity company Egypt, global cybersecurity contact',
+  title: 'Contact IntelX360 | Speak with Our Cybersecurity Experts',
+  description: 'Get in touch with IntelX360’s cybersecurity professionals for consultations, support, and tailored protection plans for your organization.',
+  keywords: 'contact IntelX360, cybersecurity consultation, cyber support, request a quote, security contact form, cyber defense inquiry',
 };
 
 export default function ContactPage() {

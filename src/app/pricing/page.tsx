@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { PricingCard } from '@/components/pricing-card';
 import { pricingPlans } from '@/lib/data';
@@ -5,9 +6,9 @@ import { Check, ShieldCheck, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-  title: 'IntelX360 Pricing | Flexible Cybersecurity Plans for SMBs & Enterprises',
-  description: 'Affordable cybersecurity solutions for every scale. IntelX360 offers flexible pricing plans for individuals, SMBs, and enterprises including monitoring, threat intelligence, incident response, and brand protection.',
-  keywords: 'cybersecurity pricing, SOC pricing, penetration testing cost, threat intelligence subscription, managed security services, SMB cybersecurity packages, enterprise cybersecurity pricing',
+  title: 'IntelX360 Pricing | Transparent Cybersecurity Packages for All Businesses',
+  description: 'Discover IntelX360’s flexible cybersecurity pricing. Choose the right plan for your organization’s size and needs — from MSSP to advanced threat intelligence and cloud protection.',
+  keywords: 'cybersecurity pricing, MSSP packages, threat intelligence plans, penetration testing cost, managed security service cost, cybersecurity plans',
 };
 
 const whyChooseUs = [

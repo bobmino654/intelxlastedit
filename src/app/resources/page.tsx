@@ -1,11 +1,13 @@
+
 import { Metadata } from 'next';
 import { ToolsSection } from '@/components/resources/tools-section';
 import { BlogSection } from '@/components/resources/blog-section';
 import { PersonalizedPosts } from '@/components/resources/personalized-posts';
 
 export const metadata: Metadata = {
-  title: 'Resources & Free Tools',
-  description: 'Access free cybersecurity tools, read our latest research on the IntelX360 blog, and get personalized threat intelligence.',
+  title: 'Cybersecurity Resources | IntelX360 Insights, Guides & Whitepapers',
+  description: 'Access IntelX360’s latest cybersecurity research, best practices, whitepapers, and expert insights to enhance your organization’s defense strategy.',
+  keywords: 'cybersecurity resources, threat intelligence reports, cyber whitepapers, security best practices, cybersecurity blog, IntelX360 insights',
 };
 
 export default function ResourcesPage() {
