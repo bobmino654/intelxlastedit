@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -7,8 +8,8 @@ import { Button } from '../ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Loader2 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
-import Link from 'next/link';
 import { Badge } from '../ui/badge';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 const userProfiles = {
   'ciso': 'Visited pricing page, searched for "compliance", read article on "Ransomware Trends"',

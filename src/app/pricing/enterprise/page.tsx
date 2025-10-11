@@ -1,10 +1,10 @@
 
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { Check, Shield, Server, Users, BarChart, FileCode, Skull } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
   title: 'Enterprise & Corporate Cybersecurity Services',

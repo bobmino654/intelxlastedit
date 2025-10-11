@@ -1,10 +1,10 @@
 
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { CheckCircle, FileText, ChevronRight, Shield, Link2, Search, BarChart } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
   title: 'Supply Chain Threat Intelligence',

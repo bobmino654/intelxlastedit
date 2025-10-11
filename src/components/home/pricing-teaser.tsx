@@ -1,8 +1,9 @@
-import Link from 'next/link';
+
 import { pricingPlans } from '@/lib/data';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export function PricingTeaser() {
   return (

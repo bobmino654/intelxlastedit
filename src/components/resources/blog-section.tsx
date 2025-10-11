@@ -1,10 +1,11 @@
+
 import Image from "next/image";
-import Link from "next/link";
 import { blogPosts } from "@/lib/data";
 import { placeholderImages } from "@/lib/placeholder-images";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
+import { LinkComponent as Link } from "@/components/LinkComponent";
 
 export function BlogSection() {
     return (

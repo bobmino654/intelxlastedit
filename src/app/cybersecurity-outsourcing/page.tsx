@@ -1,10 +1,10 @@
 
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { ShieldCheck, TrendingUp, Clock, Zap, CheckCircle, Scale } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { ParticleCanvas } from '@/components/home/particle-canvas';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
   title: 'Cybersecurity Outsourcing | Your Trusted Security Team',

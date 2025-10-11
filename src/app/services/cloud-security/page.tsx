@@ -1,9 +1,10 @@
+
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { CheckCircle, FileText, ChevronRight, Shield } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
   title: 'Cloud Security Services',
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 
 const approachPhases = [
     { title: 'Discovery & Assessment', description: 'Inventory cloud assets across AWS, Azure, and GCP. Review IAM, storage, networking, logging, and monitoring configurations.' },
-    { title: 'Security Posture Evaluation', description: 'Benchmark against CIS, NIST CSF, PCI-DSS, HIPAA, or your chosen framework. Assess alignment with Zero Trust principles.' },
+    { title: 'Security Posture Evaluation', description: 'Benchmark against CIS, NIST CSF, PCI-DSS, or your chosen framework. Assess alignment with Zero Trust principles.' },
     { title: 'Threat Modeling', description: 'Simulate attacker pathways in cloud-native contexts, from lateral movement to privilege escalation.' },
     { title: 'Remediation & Hardening', description: 'Deliver prioritized recommendations and IaC (Infrastructure as Code) guidance to prevent misconfigurations.' },
     { title: 'Ongoing Monitoring', description: 'Optional continuous visibility and compliance dashboards with alerts for risky changes.' },

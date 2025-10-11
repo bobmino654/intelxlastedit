@@ -1,5 +1,6 @@
-import Link from 'next/link';
+
 import { cn } from '@/lib/utils';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export function Logo({ className }: { className?: string }) {
   return (

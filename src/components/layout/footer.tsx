@@ -1,9 +1,10 @@
-import Link from 'next/link';
+
 import Image from 'next/image';
 import { Github, Linkedin, Twitter, Facebook } from 'lucide-react';
 import { NAV_LINKS } from '@/lib/routes';
 import { Logo } from './logo';
 import { contactDetails } from '@/lib/data';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 const certifications = [
   { name: 'CEH', logo: '/assets/ceh.png', width: 80, height: 80 },

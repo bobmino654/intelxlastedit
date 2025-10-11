@@ -1,8 +1,9 @@
+
 import type { Metadata } from 'next';
 import { allServices } from '@/lib/data';
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
   title: 'Cybersecurity Services | IntelX360 Threat Intelligence & Protection',

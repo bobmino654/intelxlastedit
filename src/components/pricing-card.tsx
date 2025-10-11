@@ -1,8 +1,9 @@
-import Link from 'next/link';
+
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 type PricingCardProps = {
   name: string;

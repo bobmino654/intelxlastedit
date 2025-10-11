@@ -1,17 +1,17 @@
 
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { NAV_LINKS } from '@/lib/routes';
 import { Logo } from './logo';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
+import { LinkComponent as Link } from "@/components/LinkComponent";
 
 export function MobileNav() {
   const pathname = usePathname();
-  const servicesDefaultValue = NAV_LINKS.find(link => link.href === '/services')?.label;
+  const servicesDefaultValue = pathname.startsWith('/services') ? '/services' : undefined;
 
   return (
     <div className="flex h-full flex-col">
@@ -21,8 +21,8 @@ export function MobileNav() {
       <nav className="flex-1 space-y-2 pt-4">
         {NAV_LINKS.map((link) => (
             link.subLinks ? (
-                <Accordion type="single" collapsible key={link.href} defaultValue={pathname.startsWith('/services') && servicesDefaultValue ? servicesDefaultValue : undefined}>
-                    <AccordionItem value={link.label} className="border-b-0">
+                <Accordion type="single" collapsible key={link.href} value={servicesDefaultValue} >
+                    <AccordionItem value={link.href} className="border-b-0">
                         <AccordionTrigger className={cn("w-full justify-between rounded-md p-3 text-lg font-medium hover:no-underline", pathname.startsWith(link.href) ? 'text-accent' : '' )}>
                              <Link href={link.href}>{link.label}</Link>
                         </AccordionTrigger>

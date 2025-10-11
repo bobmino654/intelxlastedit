@@ -1,7 +1,8 @@
-import Link from 'next/link';
+
 import { Button } from '@/components/ui/button';
 import { ParticleCanvas } from './particle-canvas';
 import { Typewriter } from './typewriter';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export function HeroSection() {
   const taglines = [

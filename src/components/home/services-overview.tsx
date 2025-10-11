@@ -1,8 +1,9 @@
-import Link from 'next/link';
+
 import { services } from '@/lib/data';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export function ServicesOverview() {
   return (

@@ -2,8 +2,8 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { LinkComponent as Link } from '@/components/LinkComponent';
 
 const clients = [
   { name: 'Etisalat', logoUrl: '/assets/etisalat.png' },
