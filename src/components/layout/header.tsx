@@ -62,7 +62,9 @@ export function Header() {
                                 href="/services"
                                 className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                               >
-                                  <Logo />
+                                  <div className="flex items-center gap-2">
+                                    <Logo />
+                                  </div>
                                   <div className="mb-2 mt-4 text-lg font-medium">
                                     IntelX360 Services
                                   </div>
@@ -86,7 +88,7 @@ export function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link href={link.href} legacyBehavior passHref>
+                    <Link href={link.href} passHref legacyBehavior={false}>
                       <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "nav-link", pathname === link.href && link.href !== '/' && 'nav-link-active')}>
                         {link.label}
                       </NavigationMenuLink>
