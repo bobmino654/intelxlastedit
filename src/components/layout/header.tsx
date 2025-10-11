@@ -3,9 +3,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ChevronDown, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
-import { NAV_LINKS, allServiceLinks } from '@/lib/routes';
+import { NAV_LINKS } from '@/lib/routes';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -37,17 +37,32 @@ export function Header() {
                   {link.subLinks ? (
                     <>
                       <NavigationMenuTrigger className={cn("nav-link", pathname.startsWith(link.href) && 'nav-link-active')}>
-                          <Link href={link.href}>{link.label}</Link>
+                          {link.label}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                           <li className="row-span-3">
+                            <NavigationMenuLink asChild>
+                              <a
+                                className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                                href="/services"
+                              >
+                                <Logo />
+                                <div className="mt-4 text-sm font-medium">
+                                  Our full suite of cybersecurity solutions.
+                                </div>
+                              </a>
+                            </NavigationMenuLink>
+                          </li>
                           {link.subLinks.map((subLink) => (
                              <ListItem
                               key={subLink.label}
                               title={subLink.label}
                               href={subLink.href}
                               className={cn(pathname === subLink.href && 'bg-accent/80')}
-                            />
+                            >
+                              {subLink.description}
+                            </ListItem>
                           ))}
                         </ul>
                       </NavigationMenuContent>
