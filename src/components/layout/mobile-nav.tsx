@@ -2,11 +2,14 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { NAV_LINKS } from '@/lib/routes';
 import { Logo } from './logo';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
+import { cn } from '@/lib/utils';
 
 export function MobileNav() {
+  const pathname = usePathname();
   return (
     <div className="flex h-full flex-col">
       <div className="flex items-center border-b pb-4">
@@ -15,9 +18,9 @@ export function MobileNav() {
       <nav className="flex-1 space-y-2 pt-4">
         {NAV_LINKS.map((link) => (
             link.subLinks ? (
-                <Accordion type="single" collapsible key={link.href}>
+                <Accordion type="single" collapsible key={link.href} defaultValue={pathname.startsWith(link.href) ? link.label : undefined}>
                     <AccordionItem value={link.label} className="border-b-0">
-                        <AccordionTrigger className="w-full justify-between rounded-md p-2 text-lg font-medium hover:bg-accent hover:text-accent-foreground hover:no-underline">
+                        <AccordionTrigger className={cn("w-full justify-between rounded-md p-3 text-lg font-medium hover:no-underline", pathname.startsWith(link.href) ? 'text-accent' : 'hover:bg-accent hover:text-accent-foreground' )}>
                              <Link href={link.href}>{link.label}</Link>
                         </AccordionTrigger>
                         <AccordionContent className="pl-4">
@@ -25,7 +28,7 @@ export function MobileNav() {
                                 <Link
                                     key={subLink.href}
                                     href={subLink.href}
-                                    className="block w-full rounded-md p-2 text-base font-medium hover:bg-accent hover:text-accent-foreground"
+                                    className={cn("block w-full rounded-md p-3 text-base font-medium", pathname === subLink.href ? 'bg-accent text-accent-foreground' : 'hover:bg-accent hover:text-accent-foreground')}
                                 >
                                     {subLink.label}
                                 </Link>
@@ -37,7 +40,7 @@ export function MobileNav() {
                 <Link
                     key={link.href}
                     href={link.href}
-                    className="block w-full rounded-md p-2 text-lg font-medium hover:bg-accent hover:text-accent-foreground"
+                    className={cn("block w-full rounded-md p-3 text-lg font-medium", pathname === link.href ? 'bg-accent text-accent-foreground' : 'hover:bg-accent hover:text-accent-foreground')}
                 >
                     {link.label}
                 </Link>

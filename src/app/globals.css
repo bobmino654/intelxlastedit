@@ -23,7 +23,7 @@
     --muted-foreground: 210 40% 60%;
 
     --accent: 45 65% 52%; /* #d3aa3a */
-    --accent-foreground: 45 65% 10%;
+    --accent-foreground: 212 22% 9%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
@@ -57,7 +57,7 @@
     --muted: 212 22% 15%;
     --muted-foreground: 210 40% 60%;
     --accent: 45 65% 52%;
-    --accent-foreground: 45 65% 10%;
+    --accent-foreground: 212 22% 9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 68% 12%;
@@ -75,5 +75,19 @@
   }
   section {
     @apply py-20 sm:py-24;
+  }
+}
+
+@layer components {
+  .nav-link {
+      @apply bg-transparent text-foreground/80 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground rounded-md font-medium transition-all duration-200 ease-in-out;
+      box-shadow: 0 2px 5px rgba(212, 175, 55, 0);
+  }
+  .nav-link-active {
+      @apply bg-accent text-accent-foreground font-bold;
+      box-shadow: 0 2px 5px rgba(212, 175, 55, 0.4);
+  }
+   .nav-link:hover {
+      box-shadow: 0 2px 5px rgba(212, 175, 55, 0.4);
   }
 }

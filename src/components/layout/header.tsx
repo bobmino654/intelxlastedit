@@ -36,8 +36,8 @@ export function Header() {
                 <NavigationMenuItem key={link.href}>
                   {link.subLinks ? (
                     <>
-                      <NavigationMenuTrigger className={cn("bg-transparent hover:text-accent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent", pathname.startsWith(link.href) ? 'text-accent' : 'text-foreground/60')}>
-                          <Link href={link.href} className='hover:text-accent'>{link.label}</Link>
+                      <NavigationMenuTrigger className={cn("nav-link", pathname.startsWith(link.href) && 'nav-link-active')}>
+                          <Link href={link.href}>{link.label}</Link>
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -46,13 +46,14 @@ export function Header() {
                               key={subLink.label}
                               title={subLink.label}
                               href={subLink.href}
+                              className={cn(pathname === subLink.href && 'bg-accent/80')}
                             />
                           ))}
                         </ul>
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:text-accent focus:bg-transparent", pathname === link.href ? 'text-accent' : 'text-foreground/60')}>
+                    <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "nav-link", pathname === link.href && 'nav-link-active')}>
                       <Link href={link.href}>
                         {link.label}
                       </Link>
