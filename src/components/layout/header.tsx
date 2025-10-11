@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -84,11 +85,11 @@ export function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link href={link.href} legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                    <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                      <Link href={link.href}>
                         {link.label}
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   )}
                 </NavigationMenuItem>
               ))}
@@ -113,11 +114,12 @@ export function Header() {
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+>(({ className, title, children, href, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <Link
+          href={href || ''}
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
@@ -129,7 +131,7 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   )
