@@ -79,6 +79,9 @@ export function ContactForm() {
           message: values.message,
         }),
       });
+      if (!response.ok) {
+        throw new Error('Failed to send email.');
+      }
       toast({
         title: 'Form Submitted Successfully!',
         description: 'Thank you for reaching out. We will get back to you shortly.',

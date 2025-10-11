@@ -11,6 +11,8 @@ import { Button } from '../ui/button';
 
 export function MobileNav() {
   const pathname = usePathname();
+  const servicesDefaultValue = NAV_LINKS.find(link => link.href === '/services')?.label;
+
   return (
     <div className="flex h-full flex-col">
       <div className="flex items-center border-b pb-4">
@@ -19,7 +21,7 @@ export function MobileNav() {
       <nav className="flex-1 space-y-2 pt-4">
         {NAV_LINKS.map((link) => (
             link.subLinks ? (
-                <Accordion type="single" collapsible key={link.href} defaultValue={pathname.startsWith(link.href) ? link.label : undefined}>
+                <Accordion type="single" collapsible key={link.href} defaultValue={pathname.startsWith(link.href) ? servicesDefaultValue : undefined}>
                     <AccordionItem value={link.label} className="border-b-0">
                         <AccordionTrigger className={cn("w-full justify-between rounded-md p-3 text-lg font-medium hover:no-underline", pathname.startsWith(link.href) ? 'text-accent' : 'hover:bg-accent hover:text-accent-foreground' )}>
                              <Link href={link.href}>{link.label}</Link>

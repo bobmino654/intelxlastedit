@@ -63,7 +63,7 @@ export function Header() {
                                 className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                               >
                                   <div className="mb-2 mt-4 text-lg font-medium">
-                                    <Logo />
+                                    IntelX360 Services
                                   </div>
                                   <p className="text-sm leading-tight text-muted-foreground">
                                     Our full suite of cybersecurity solutions.
@@ -85,7 +85,7 @@ export function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link href={link.href} legacyBehavior passHref>
+                    <Link href={link.href} passHref>
                       <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "nav-link", pathname === link.href && link.href !== '/' && 'nav-link-active')}>
                         {link.label}
                       </NavigationMenuLink>
@@ -118,7 +118,8 @@ const ListItem = React.forwardRef<
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <Link
+          href={props.href || ''}
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -130,7 +131,7 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   )
