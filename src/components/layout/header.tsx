@@ -58,9 +58,9 @@ export function Header() {
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                            <li className="row-span-3">
                             <NavigationMenuLink asChild>
-                              <a
-                                className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                              <Link
                                 href="/services"
+                                className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                               >
                                   <div className="mb-2 mt-4 text-lg font-medium">
                                     <Logo />
@@ -68,7 +68,7 @@ export function Header() {
                                   <p className="text-sm leading-tight text-muted-foreground">
                                     Our full suite of cybersecurity solutions.
                                   </p>
-                                </a>
+                                </Link>
                             </NavigationMenuLink>
                           </li>
                           {link.subLinks.map((subLink) => (
@@ -85,7 +85,7 @@ export function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link href={link.href} legacyBehavior={false} passHref>
+                    <Link href={link.href} legacyBehavior passHref>
                       <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "nav-link", pathname === link.href && link.href !== '/' && 'nav-link-active')}>
                         {link.label}
                       </NavigationMenuLink>
@@ -118,7 +118,7 @@ const ListItem = React.forwardRef<
   return (
     <li>
       <NavigationMenuLink asChild>
-        <Link
+        <a
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -130,7 +130,7 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </Link>
+        </a>
       </NavigationMenuLink>
     </li>
   )
