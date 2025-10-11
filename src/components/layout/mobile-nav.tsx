@@ -7,6 +7,7 @@ import { NAV_LINKS } from '@/lib/routes';
 import { Logo } from './logo';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 import { cn } from '@/lib/utils';
+import { Button } from '../ui/button';
 
 export function MobileNav() {
   const pathname = usePathname();
@@ -40,13 +41,18 @@ export function MobileNav() {
                 <Link
                     key={link.href}
                     href={link.href}
-                    className={cn("block w-full rounded-md p-3 text-lg font-medium", pathname === link.href ? 'bg-accent text-accent-foreground' : 'hover:bg-accent hover:text-accent-foreground')}
+                    className={cn("block w-full rounded-md p-3 text-lg font-medium", pathname === link.href && link.href !== '/' ? 'bg-accent text-accent-foreground' : 'hover:bg-accent hover:text-accent-foreground')}
                 >
                     {link.label}
                 </Link>
             )
         ))}
       </nav>
+       <div className="mt-auto border-t pt-4">
+            <Button asChild className="w-full">
+                <Link href="/contact">Get Protected</Link>
+            </Button>
+       </div>
     </div>
   );
 }
