@@ -43,15 +43,16 @@ export function Header() {
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                            <li className="row-span-3">
                             <NavigationMenuLink asChild>
-                              <a
-                                className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                                href="/services"
-                              >
-                                <Logo />
-                                <div className="mt-4 text-sm font-medium">
-                                  Our full suite of cybersecurity solutions.
-                                </div>
-                              </a>
+                              <Link href="/services" legacyBehavior passHref>
+                                <a className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                                  <div className="mb-2 mt-4 text-lg font-medium">
+                                    <Logo />
+                                  </div>
+                                  <p className="text-sm leading-tight text-muted-foreground">
+                                    Our full suite of cybersecurity solutions.
+                                  </p>
+                                </a>
+                              </Link>
                             </NavigationMenuLink>
                           </li>
                           {link.subLinks.map((subLink) => (
