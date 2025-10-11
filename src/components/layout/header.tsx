@@ -68,7 +68,7 @@ export function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "nav-link", pathname === link.href && 'nav-link-active')}>
+                    <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "nav-link", pathname === link.href && link.href !== '/' && 'nav-link-active')}>
                       <Link href={link.href}>
                         {link.label}
                       </Link>
