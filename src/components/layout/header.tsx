@@ -52,11 +52,11 @@ export function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link href={link.href} legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:text-accent focus:bg-transparent", pathname === link.href ? 'text-accent' : 'text-foreground/60')}>
+                    <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:text-accent focus:bg-transparent", pathname === link.href ? 'text-accent' : 'text-foreground/60')}>
+                      <Link href={link.href}>
                         {link.label}
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   )}
                 </NavigationMenuItem>
               ))}
