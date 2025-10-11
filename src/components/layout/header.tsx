@@ -51,7 +51,7 @@ export function Header() {
                 <NavigationMenuItem key={link.href}>
                   {link.subLinks ? (
                     <>
-                      <NavigationMenuTrigger className={cn("nav-link", pathname.startsWith(link.href) && 'nav-link-active')}>
+                      <NavigationMenuTrigger className={cn(navigationMenuTriggerStyle(), "bg-transparent", pathname.startsWith(link.href) && 'text-accent font-bold')}>
                           {link.label}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
@@ -62,25 +62,7 @@ export function Header() {
                                  href="/services"
                                  className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                                >
-                                <div className="flex items-center gap-2">
-                                    <svg
-                                        className="h-8 w-8 text-accent"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    >
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                        <path d="m9.5 9 5 5"></path>
-                                        <path d="m14.5 9-5 5"></path>
-                                    </svg>
-                                    <span className="font-headline text-2xl font-bold text-white">
-                                        IntelX360
-                                    </span>
-                                </div>
+                                <Logo />
                                  <div className="mb-2 mt-4 text-lg font-medium">
                                    IntelX360 Services
                                  </div>
@@ -95,7 +77,6 @@ export function Header() {
                               key={subLink.label}
                               title={subLink.label}
                               href={subLink.href}
-                              className={cn(pathname === subLink.href && 'bg-accent/80')}
                             >
                               {subLink.description}
                             </ListItem>
@@ -105,7 +86,7 @@ export function Header() {
                     </>
                   ) : (
                     <Link href={link.href} legacyBehavior passHref>
-                      <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "nav-link", pathname === link.href && link.href !== '/' && 'nav-link-active')}>
+                      <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent", pathname === link.href && link.href !== '/' ? 'text-accent font-bold' : '')}>
                         <a>{link.label}</a>
                       </NavigationMenuLink>
                     </Link>

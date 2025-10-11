@@ -77,17 +77,3 @@
     @apply py-20 sm:py-24;
   }
 }
-
-@layer components {
-  .nav-link {
-      @apply bg-transparent text-foreground/80 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground rounded-md font-medium transition-all duration-200 ease-in-out;
-      box-shadow: 0 2px 5px rgba(212, 175, 55, 0);
-  }
-  .nav-link-active {
-      @apply bg-accent text-accent-foreground font-bold;
-      box-shadow: 0 2px 5px rgba(212, 175, 55, 0.4);
-  }
-   .nav-link:hover {
-      box-shadow: 0 2px 5px rgba(212, 175, 55, 0.4);
-  }
-}
