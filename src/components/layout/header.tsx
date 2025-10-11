@@ -58,7 +58,7 @@ export function Header() {
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                            <li className="row-span-3">
                             <NavigationMenuLink asChild>
-                              <Link
+                              <a
                                 className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                                 href="/services"
                               >
@@ -68,7 +68,7 @@ export function Header() {
                                   <p className="text-sm leading-tight text-muted-foreground">
                                     Our full suite of cybersecurity solutions.
                                   </p>
-                                </Link>
+                                </a>
                             </NavigationMenuLink>
                           </li>
                           {link.subLinks.map((subLink) => (
@@ -85,7 +85,7 @@ export function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link href={link.href} legacyBehavior passHref>
+                    <Link href={link.href} legacyBehavior={false} passHref>
                       <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "nav-link", pathname === link.href && link.href !== '/' && 'nav-link-active')}>
                         {link.label}
                       </NavigationMenuLink>
