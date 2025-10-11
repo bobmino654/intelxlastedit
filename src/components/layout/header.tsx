@@ -51,26 +51,23 @@ export function Header() {
                 <NavigationMenuItem key={link.href}>
                   {link.subLinks ? (
                     <>
-                      <NavigationMenuTrigger className={cn(navigationMenuTriggerStyle(), "bg-transparent", pathname.startsWith(link.href) && 'text-accent font-bold')}>
+                      <NavigationMenuTrigger className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
                           {link.label}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                            <li className="row-span-3">
-                             <NavigationMenuLink asChild>
-                               <Link
-                                 href="/services"
-                                 className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                               >
-                                <Logo />
-                                 <div className="mb-2 mt-4 text-lg font-medium">
-                                   IntelX360 Services
-                                 </div>
-                                 <p className="text-sm leading-tight text-muted-foreground">
-                                   Our full suite of cybersecurity solutions.
-                                 </p>
-                               </Link>
-                             </NavigationMenuLink>
+                             <div
+                               className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                             >
+                               <Logo />
+                               <div className="mb-2 mt-4 text-lg font-medium">
+                                 IntelX360 Services
+                               </div>
+                               <p className="text-sm leading-tight text-muted-foreground">
+                                 Our full suite of cybersecurity solutions.
+                               </p>
+                             </div>
                            </li>
                           {link.subLinks.map((subLink) => (
                              <ListItem
@@ -85,9 +82,9 @@ export function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link href={link.href} legacyBehavior passHref>
-                      <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent", pathname === link.href && link.href !== '/' ? 'text-accent font-bold' : '')}>
-                        <a>{link.label}</a>
+                    <Link href={link.href} passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                        {link.label}
                       </NavigationMenuLink>
                     </Link>
                   )}
