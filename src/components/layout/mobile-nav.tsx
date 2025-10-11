@@ -21,9 +21,9 @@ export function MobileNav() {
       <nav className="flex-1 space-y-2 pt-4">
         {NAV_LINKS.map((link) => (
             link.subLinks ? (
-                <Accordion type="single" collapsible key={link.href} defaultValue={pathname.startsWith(link.href) && servicesDefaultValue ? servicesDefaultValue : undefined}>
+                <Accordion type="single" collapsible key={link.href} defaultValue={pathname.startsWith('/services') && servicesDefaultValue ? servicesDefaultValue : undefined}>
                     <AccordionItem value={link.label} className="border-b-0">
-                        <AccordionTrigger className={cn("w-full justify-between rounded-md p-3 text-lg font-medium hover:no-underline", pathname.startsWith(link.href) ? 'text-accent' : 'hover:bg-accent hover:text-accent-foreground' )}>
+                        <AccordionTrigger className={cn("w-full justify-between rounded-md p-3 text-lg font-medium hover:no-underline", pathname.startsWith(link.href) ? 'text-accent' : '' )}>
                              <Link href={link.href}>{link.label}</Link>
                         </AccordionTrigger>
                         <AccordionContent className="pl-4">
@@ -31,7 +31,7 @@ export function MobileNav() {
                                 <Link
                                     key={subLink.href}
                                     href={subLink.href}
-                                    className={cn("block w-full rounded-md p-3 text-base font-medium", pathname === subLink.href ? 'bg-accent text-accent-foreground' : 'hover:bg-accent hover:text-accent-foreground')}
+                                    className={cn("block w-full rounded-md p-3 text-base font-medium", pathname === subLink.href ? 'bg-accent text-accent-foreground' : '')}
                                 >
                                     {subLink.label}
                                 </Link>
@@ -43,7 +43,7 @@ export function MobileNav() {
                 <Link
                     key={link.href}
                     href={link.href}
-                    className={cn("block w-full rounded-md p-3 text-lg font-medium", pathname === link.href && link.href !== '/' ? 'bg-accent text-accent-foreground' : 'hover:bg-accent hover:text-accent-foreground')}
+                    className={cn("block w-full rounded-md p-3 text-lg font-medium", pathname === link.href && link.href !== '/' ? 'bg-accent text-accent-foreground' : '')}
                 >
                     {link.label}
                 </Link>

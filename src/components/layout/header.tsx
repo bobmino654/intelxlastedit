@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -51,27 +50,30 @@ export function Header() {
                 <NavigationMenuItem key={link.href}>
                   {link.subLinks ? (
                     <>
-                      <NavigationMenuTrigger className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                      <NavigationMenuTrigger className="bg-transparent">
                           {link.label}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                            <li className="row-span-3">
-                             <div
-                               className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                             >
-                               <Logo />
-                               <div className="mb-2 mt-4 text-lg font-medium">
-                                 IntelX360 Services
-                               </div>
-                               <p className="text-sm leading-tight text-muted-foreground">
-                                 Our full suite of cybersecurity solutions.
-                               </p>
-                             </div>
+                             <NavigationMenuLink asChild>
+                               <Link
+                                 href="/services"
+                                 className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                               >
+                                 <Logo />
+                                 <div className="mb-2 mt-4 text-lg font-medium">
+                                   IntelX360 Services
+                                 </div>
+                                 <p className="text-sm leading-tight text-muted-foreground">
+                                   Our full suite of cybersecurity solutions.
+                                 </p>
+                               </Link>
+                             </NavigationMenuLink>
                            </li>
                           {link.subLinks.map((subLink) => (
-                             <ListItem
-                              key={subLink.label}
+                            <ListItem
+                              key={subLink.href}
                               title={subLink.label}
                               href={subLink.href}
                             >
@@ -82,7 +84,7 @@ export function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link href={link.href} passHref>
+                    <Link href={link.href} legacyBehavior passHref>
                       <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
                         {link.label}
                       </NavigationMenuLink>
@@ -118,7 +120,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
             className
           )}
           {...props}
