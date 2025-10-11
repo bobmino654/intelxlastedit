@@ -86,9 +86,9 @@ export function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link href={link.href} passHref legacyBehavior={false} asChild>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "nav-link", pathname === link.href && link.href !== '/' && 'nav-link-active')}>
-                        {link.label}
+                    <Link href={link.href} passHref legacyBehavior={false}>
+                      <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "nav-link", pathname === link.href && link.href !== '/' && 'nav-link-active')}>
+                        <a>{link.label}</a>
                       </NavigationMenuLink>
                     </Link>
                   )}
@@ -119,7 +119,7 @@ const ListItem = React.forwardRef<
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <Link
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -131,7 +131,7 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   )
