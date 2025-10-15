@@ -7,7 +7,6 @@ import Image from 'next/image';
 import { AwsLogo } from '../logos/aws';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-import { SophosLogo } from '../logos/sophos';
 
 const partners = [
   { name: 'Bitdefender', logo: BitdefenderLogo },
@@ -15,7 +14,6 @@ const partners = [
   { name: 'Elastic', logo: ElasticLogo },
   { name: 'LevelBlue', logo: LevelBlueLogo },
   { name: 'AWS', logo: AwsLogo },
-  { name: 'Sophos', logo: SophosLogo },
 ];
 
 export function PartnerBanner() {
