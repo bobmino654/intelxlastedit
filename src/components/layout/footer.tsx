@@ -5,6 +5,7 @@ import { NAV_LINKS } from '@/lib/routes';
 import { Logo } from './logo';
 import { contactDetails } from '@/lib/data';
 import { LinkComponent as Link } from '@/components/LinkComponent';
+import { SophosCspLogo } from '../logos/sophos-csp';
 
 const certifications = [
   { name: 'CEH', logo: '/assets/ceh.png', width: 80, height: 80 },
@@ -91,6 +92,9 @@ export function Footer() {
                         />
                     </div>
                 ))}
+                 <div key="Sophos CSP" className="transition-transform duration-300 hover:scale-110">
+                    <SophosCspLogo className="h-20 w-auto object-contain filter grayscale hover:filter-none text-gray-400" />
+                </div>
             </div>
         </div>
 
