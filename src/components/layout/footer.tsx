@@ -12,6 +12,7 @@ const certifications = [
   { name: 'OSCP', logo: '/assets/oscp.png', width: 80, height: 80 },
   { name: 'ISO 27001', logo: '/assets/iso27001.png', width: 80, height: 80 },
   { name: 'SOC 2 Type II', logo: '/assets/soc.png', width: 100, height: 80 },
+  { name: 'Sophos Cloud Security', logo: '/assets/sophoscloudsecurity.png', width: 100, height: 80 },
 ];
 
 
