@@ -8,6 +8,7 @@ import { AwsLogo } from '../logos/aws';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import { SophosLogo } from '../logos/sophos';
+import { IbmPartnerLogo } from '../logos/ibm';
 
 const partners = [
   { name: 'Bitdefender', logo: BitdefenderLogo },
@@ -16,6 +17,7 @@ const partners = [
   { name: 'LevelBlue', logo: LevelBlueLogo },
   { name: 'AWS', logo: AwsLogo },
   { name: 'Sophos', logo: SophosLogo },
+  { name: 'IBM', logo: IbmPartnerLogo },
 ];
 
 export function PartnerBanner() {
