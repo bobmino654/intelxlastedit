@@ -9,6 +9,7 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 import { SophosLogo } from '../logos/sophos';
 import { IbmPartnerLogo } from '../logos/ibm';
+import { SplunkLogo } from '../logos/splunk';
 
 const partners = [
   { name: 'Bitdefender', logo: BitdefenderLogo },
@@ -18,6 +19,7 @@ const partners = [
   { name: 'AWS', logo: AwsLogo },
   { name: 'Sophos', logo: SophosLogo },
   { name: 'IBM', logo: IbmPartnerLogo },
+  { name: 'Splunk', logo: SplunkLogo },
 ];
 
 export function PartnerBanner() {
