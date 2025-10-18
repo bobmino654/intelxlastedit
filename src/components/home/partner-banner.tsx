@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { SophosLogo } from '../logos/sophos';
 import { IbmPartnerLogo } from '../logos/ibm';
 import { SplunkLogo } from '../logos/splunk';
+import { GoogleCloudLogo } from '../logos/google-cloud';
 
 const partners = [
   { name: 'Bitdefender', logo: BitdefenderLogo },
@@ -20,6 +21,7 @@ const partners = [
   { name: 'Sophos', logo: SophosLogo },
   { name: 'IBM', logo: IbmPartnerLogo },
   { name: 'Splunk', logo: SplunkLogo },
+  { name: 'Google Cloud', logo: GoogleCloudLogo },
 ];
 
 export function PartnerBanner() {
