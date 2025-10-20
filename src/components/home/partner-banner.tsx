@@ -24,6 +24,10 @@ const partners = [
   { name: 'Google Cloud', logo: GoogleCloudLogo },
 ];
 
+const imagePartners = [
+    { name: 'Rapid7', logoUrl: '/assets/rapid7.png', width: 200, height: 60 },
+];
+
 export function PartnerBanner() {
   return (
     <section className="bg-background py-12 sm:py-16">
@@ -36,12 +40,22 @@ export function PartnerBanner() {
         </p>
         <div className="relative mt-12 w-full overflow-hidden">
           <div className="animate-scroll-infinite flex w-max items-center gap-16">
-            {[...partners, ...partners].map((partner, index) => (
+            {[...partners, ...imagePartners, ...partners, ...imagePartners].map((partner, index) => (
               <div
                 key={`${partner.name}-${index}`}
                 className="group flex-shrink-0"
               >
-                <partner.logo className="h-16 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110" />
+                {'logoUrl' in partner ? (
+                   <Image
+                    src={(partner as any).logoUrl}
+                    alt={`${partner.name} logo`}
+                    width={(partner as any).width}
+                    height={(partner as any).height}
+                    className="h-16 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110"
+                  />
+                ) : (
+                    <partner.logo className="h-16 w-auto object-contain transition-all duration-300 filter grayscale group-hover:filter-none group-hover:scale-110" />
+                )}
               </div>
             ))}
           </div>
