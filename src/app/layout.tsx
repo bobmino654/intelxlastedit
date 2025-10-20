@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
-        {/* Start cookieyes banner */} <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/0ddffd7ece1ddc0ba426fe13/script.js"></script> {/* End cookieyes banner */}
+        <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/0ddffd7ece1ddc0ba426fe13/script.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=PT+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
