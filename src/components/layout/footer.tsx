@@ -59,6 +59,7 @@ export function Footer() {
               <ul className="mt-4 space-y-2">
                 <li><Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-accent">Privacy Policy</Link></li>
                 <li><Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-accent">Terms of Service</Link></li>
+                <li><Link href="/cookies-policy" className="text-sm text-muted-foreground hover:text-accent">Cookie Policy</Link></li>
               </ul>
             </div>
             <div>

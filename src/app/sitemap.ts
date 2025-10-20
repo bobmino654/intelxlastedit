@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/threat-intelligence',
     '/services/virtual-ciso',
     '/terms-of-service',
+    '/cookies-policy',
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = staticPages.map((path) => ({
