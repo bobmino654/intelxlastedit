@@ -24,8 +24,7 @@ const partners = [
   { name: 'Google Cloud', logo: GoogleCloudLogo },
 ];
 
-const imagePartners = [
-    { name: 'Rapid7', logoUrl: '/assets/rapid7.png', width: 200, height: 60 },
+const imagePartners: { name: string, logoUrl: string, width: number, height: number }[] = [
 ];
 
 export function PartnerBanner() {
