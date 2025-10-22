@@ -13,7 +13,7 @@ const clients = [
   { name: 'Vodafone', logoUrl: '/assets/vodafone.png' },
   { name: 'Coca-Cola', logoUrl: '/assets/cocacola.png' },
   { name: 'HSBC', logoUrl: '/assets/hsbc.png' },
-  { name: 'NBK', logoUrl: '/assets/nbk.webp' },
+  { name: 'NBK', logoUrl: '/assets/nbk.png' },
   { name: 'XDEGEMAC', logoUrl: '/assets/xdegemac.png' },
   { name: 'Papa Johns', logoUrl: '/assets/papajohns.png' },
 ];
