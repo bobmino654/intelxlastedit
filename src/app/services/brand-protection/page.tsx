@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Brand Protection Services',
+  title: 'Brand Protection Services | IntelX360',
   description: 'Detect and take down phishing sites, fraudulent mobile apps, and social media impersonations targeting your brand.',
+  openGraph: {
+    title: 'Brand Protection Services | IntelX360',
+    description: 'Detect and take down phishing sites, fraudulent apps, and social media impersonations.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Brand Protection Services | IntelX360',
+    description: 'Detect and take down phishing sites, fraudulent apps, and social media impersonations.',
+    images: ['/og-image.png'],
+  },
 };
 
 const approachPhases = [

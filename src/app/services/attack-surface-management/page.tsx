@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Attack Surface Management (ASM)',
+  title: 'Attack Surface Management (ASM) | IntelX360',
   description: 'Gain full visibility into your external digital footprint and reduce your attack surface with IntelX360’s ASM service.',
+  openGraph: {
+    title: 'Attack Surface Management (ASM) | IntelX360',
+    description: 'Gain full visibility into your external digital footprint and reduce your attack surface.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Attack Surface Management (ASM) | IntelX360',
+    description: 'Gain full visibility into your external digital footprint and reduce your attack surface.',
+    images: ['/og-image.png'],
+  },
 };
 
 const benefits = [

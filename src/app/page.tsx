@@ -13,6 +13,16 @@ export const metadata: Metadata = {
   title: 'IntelX360 | Comprehensive Cybersecurity Solutions & Threat Intelligence',
   description: 'Protect your business with IntelX360 — offering world-class cybersecurity, penetration testing, threat intelligence, managed security (MSSP), and cloud protection. Stay ahead of cyber threats today.',
   keywords: 'cybersecurity services, managed security, penetration testing, threat intelligence, MSSP, cloud security, cyber defense company, IntelX360',
+  openGraph: {
+    title: 'IntelX360 | Comprehensive Cybersecurity Solutions & Threat Intelligence',
+    description: 'Protect your business with world-class cybersecurity, penetration testing, threat intelligence, managed security (MSSP), and cloud protection.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'IntelX360 | Comprehensive Cybersecurity Solutions & Threat Intelligence',
+    description: 'Protect your business with world-class cybersecurity, penetration testing, threat intelligence, managed security (MSSP), and cloud protection.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function Home() {

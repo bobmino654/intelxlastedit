@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Incident Response Services',
+  title: 'Incident Response Services | IntelX360',
   description: 'Rapidly respond to, investigate, and recover from security incidents with our expert forensics and response team.',
+  openGraph: {
+    title: 'Incident Response Services | IntelX360',
+    description: 'Rapidly respond to, investigate, and recover from security incidents.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Incident Response Services | IntelX360',
+    description: 'Rapidly respond to, investigate, and recover from security incidents.',
+    images: ['/og-image.png'],
+  },
 };
 
 const processPhases = [

@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Threat Intelligence Services',
+  title: 'Threat Intelligence Services | IntelX360',
   description: 'Actionable, validated, and timely threat intelligence to help you stay ahead of adversaries. We deliver insights security teams can trust.',
+  openGraph: {
+    title: 'Threat Intelligence Services | IntelX360',
+    description: 'Actionable, validated, and timely threat intelligence to help you stay ahead of adversaries.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Threat Intelligence Services | IntelX360',
+    description: 'Actionable, validated, and timely threat intelligence to help you stay ahead of adversaries.',
+    images: ['/og-image.png'],
+  },
 };
 
 const methodology = [

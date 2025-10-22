@@ -1,8 +1,18 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'IntelX360 Privacy Policy. Learn how we collect, use, and protect your data.',
+  title: 'Privacy Policy | IntelX360',
+  description: 'IntelX360 Privacy Policy. Learn how we collect, use, and protect your data when you use our services and website.',
+  openGraph: {
+    title: 'Privacy Policy | IntelX360',
+    description: 'Learn how we collect, use, and protect your data.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Privacy Policy | IntelX360',
+    description: 'Learn how we collect, use, and protect your data.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function PrivacyPolicyPage() {

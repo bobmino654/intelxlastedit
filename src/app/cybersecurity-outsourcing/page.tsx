@@ -7,9 +7,19 @@ import { ParticleCanvas } from '@/components/home/particle-canvas';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity Outsourcing | Flexible & Scalable Security Operations',
+  title: 'Cybersecurity Outsourcing | IntelX360',
   description: 'Outsource your cybersecurity operations with IntelX360. Gain access to expert SOC monitoring, threat hunting, and compliance management — all at reduced cost and maximum efficiency.',
   keywords: 'cybersecurity outsourcing, managed security, SOC services, security operations outsourcing, cyber risk management, remote security monitoring',
+  openGraph: {
+    title: 'Cybersecurity Outsourcing | IntelX360',
+    description: 'Gain 24/7 expert protection with our flexible and scalable security operations.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Cybersecurity Outsourcing | IntelX360',
+    description: 'Gain 24/7 expert protection with our flexible and scalable security operations.',
+    images: ['/og-image.png'],
+  },
 };
 
 const coreOfferings = [

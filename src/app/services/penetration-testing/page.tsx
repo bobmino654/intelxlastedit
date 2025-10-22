@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Penetration Testing Services',
+  title: 'Penetration Testing Services | IntelX360',
   description: 'Simulated cyber attacks to identify and remediate vulnerabilities. Our threat-centric approach measures real-world impact to reduce your business risk.',
+  openGraph: {
+    title: 'Penetration Testing Services | IntelX360',
+    description: 'Simulated cyber attacks to identify and remediate vulnerabilities.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Penetration Testing Services | IntelX360',
+    description: 'Simulated cyber attacks to identify and remediate vulnerabilities.',
+    images: ['/og-image.png'],
+  },
 };
 
 const phases = [

@@ -4,6 +4,16 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Cookie Policy | IntelX360',
   description: 'Learn how IntelX360 uses cookies to improve your experience, analyze site performance, and deliver relevant advertising. Manage your cookie preferences.',
+  openGraph: {
+    title: 'Cookie Policy | IntelX360',
+    description: 'Learn how we use cookies to improve your experience and analyze site performance.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Cookie Policy | IntelX360',
+    description: 'Learn how we use cookies to improve your experience and analyze site performance.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function CookiePolicyPage() {

@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Supply Chain Threat Intelligence',
+  title: 'Supply Chain Threat Intelligence | IntelX360',
   description: 'Monitor your third-party ecosystem for risks and vulnerabilities that could impact your organization.',
+  openGraph: {
+    title: 'Supply Chain Threat Intelligence | IntelX360',
+    description: 'Monitor your third-party ecosystem for risks and vulnerabilities.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Supply Chain Threat Intelligence | IntelX360',
+    description: 'Monitor your third-party ecosystem for risks and vulnerabilities.',
+    images: ['/og-image.png'],
+  },
 };
 
 const methodology = [

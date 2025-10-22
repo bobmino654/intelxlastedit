@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Virtual CISO (vCISO) Services',
+  title: 'Virtual CISO (vCISO) Services | IntelX360',
   description: 'Executive-level cybersecurity leadership and strategic guidance on a flexible, scalable basis to align your security with business goals.',
+  openGraph: {
+    title: 'Virtual CISO (vCISO) Services | IntelX360',
+    description: 'Get executive-level cybersecurity leadership and strategic guidance on a flexible, scalable basis.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Virtual CISO (vCISO) Services | IntelX360',
+    description: 'Get executive-level cybersecurity leadership and strategic guidance on a flexible, scalable basis.',
+    images: ['/og-image.png'],
+  },
 };
 
 const vCisoDeliverables = [

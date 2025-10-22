@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Small Business Cybersecurity Packages',
+  title: 'Small Business Cybersecurity Packages | IntelX360',
   description: 'Enterprise-grade security solutions for small and medium-sized businesses. Protect your web apps, cloud infrastructure, and employees.',
+  openGraph: {
+    title: 'Small Business Cybersecurity Packages | IntelX360',
+    description: 'Enterprise-grade security solutions for small and medium-sized businesses.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Small Business Cybersecurity Packages | IntelX360',
+    description: 'Enterprise-grade security solutions for small and medium-sized businesses.',
+    images: ['/og-image.png'],
+  },
 };
 
 const services = [
@@ -120,8 +130,7 @@ export default function SmbPricingPage() {
       <section className="text-center">
         <Card className="mx-auto max-w-2xl bg-primary/5">
           <CardHeader>
-            <CardTitle className="font-headline text-2xl text-accent">Ready to Secure Your Business?</CardTitle>
-          </CardHeader>
+            <CardTitle className="font-headline text-2xl text-accent">Ready to Secure Your Business?</CardTitle>          </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">Get a personalized quote or ask our experts which plan is right for you. Secure your business today.</p>
             <Button size="lg" asChild className="mt-6">

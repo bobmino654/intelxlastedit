@@ -10,6 +10,16 @@ export const metadata: Metadata = {
     title: 'About IntelX360 | Trusted Cybersecurity Experts & Innovators',
     description: 'Learn about IntelX360 — a leading cybersecurity company providing proactive defense, intelligence-driven solutions, and dedicated experts protecting global organizations.',
     keywords: 'about IntelX360, cybersecurity experts, threat intelligence company, cyber defense team, security innovation, cyber consulting',
+    openGraph: {
+        title: 'About IntelX360 | Trusted Cybersecurity Experts & Innovators',
+        description: 'Learn about our mission, vision, and the expert team driving our innovative cybersecurity solutions.',
+        images: ['/og-image.png'],
+    },
+    twitter: {
+        title: 'About IntelX360 | Trusted Cybersecurity Experts & Innovators',
+        description: 'Learn about our mission, vision, and the expert team driving our innovative cybersecurity solutions.',
+        images: ['/og-image.png'],
+    },
 };
 
 

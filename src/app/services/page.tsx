@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: 'IntelX360 Cybersecurity Services | MSSP, Threat Intelligence & Incident Response',
   description: 'Explore IntelX360’s complete suite of cybersecurity services, including managed security (MSSP), penetration testing, threat intelligence, incident response, and brand protection.',
   keywords: 'cybersecurity services, MSSP, penetration testing, incident response, threat intelligence, brand protection, vCISO, cloud security',
+  openGraph: {
+    title: 'IntelX360 Cybersecurity Services | MSSP, Threat Intelligence & Incident Response',
+    description: 'Explore our comprehensive suite of services, including penetration testing, managed security, and incident response.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'IntelX360 Cybersecurity Services | MSSP, Threat Intelligence & Incident Response',
+    description: 'Explore our comprehensive suite of services, including penetration testing, managed security, and incident response.',
+    images: ['/og-image.png'],
+  },
 };
 
 const serviceLinks: Record<string, string> = {

@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Personal & Family Cybersecurity Protection',
+  title: 'Personal & Family Cybersecurity Protection | IntelX360',
   description: 'Flexible and affordable security solutions for your home, family, and digital life. Protect your Wi-Fi, devices, and personal data.',
+  openGraph: {
+    title: 'Personal & Family Cybersecurity Protection | IntelX360',
+    description: 'Flexible and affordable security solutions for your home, family, and digital life.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Personal & Family Cybersecurity Protection | IntelX360',
+    description: 'Flexible and affordable security solutions for your home, family, and digital life.',
+    images: ['/og-image.png'],
+  },
 };
 
 const services = [

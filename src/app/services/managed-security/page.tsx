@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Managed Security Services (MSSP)',
+  title: 'Managed Security Services (MSSP) | IntelX360',
   description: '24/7 security monitoring, threat hunting, and incident response from our expert SOC team to protect your infrastructure.',
+  openGraph: {
+    title: 'Managed Security Services (MSSP) | IntelX360',
+    description: 'Get 24/7 security monitoring, threat hunting, and incident response from our expert SOC team.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Managed Security Services (MSSP) | IntelX360',
+    description: 'Get 24/7 security monitoring, threat hunting, and incident response from our expert SOC team.',
+    images: ['/og-image.png'],
+  },
 };
 
 const servicePillars = [

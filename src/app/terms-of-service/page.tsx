@@ -1,8 +1,18 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service',
-  description: 'IntelX360 Terms of Service. By using our services, you agree to these terms.',
+  title: 'Terms of Service | IntelX360',
+  description: 'IntelX360 Terms of Service. By using our services, you agree to these terms and conditions.',
+  openGraph: {
+    title: 'Terms of Service | IntelX360',
+    description: 'By using our services, you agree to these terms.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Terms of Service | IntelX360',
+    description: 'By using our services, you agree to these terms.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function TermsOfServicePage() {

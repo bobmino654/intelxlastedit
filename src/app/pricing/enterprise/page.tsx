@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Enterprise & Corporate Cybersecurity Services',
+  title: 'Enterprise & Corporate Cybersecurity Services | IntelX360',
   description: 'Advanced cybersecurity solutions for enterprises, including red teaming, global threat intelligence, and board-level advisory.',
+  openGraph: {
+    title: 'Enterprise & Corporate Cybersecurity Services | IntelX360',
+    description: 'Advanced cybersecurity solutions for enterprises, including red teaming and board-level advisory.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Enterprise & Corporate Cybersecurity Services | IntelX360',
+    description: 'Advanced cybersecurity solutions for enterprises, including red teaming and board-level advisory.',
+    images: ['/og-image.png'],
+  },
 };
 
 const services = [

@@ -10,6 +10,16 @@ export const metadata: Metadata = {
   title: 'Contact IntelX360 | Speak with Our Cybersecurity Experts',
   description: 'Get in touch with IntelX360’s cybersecurity professionals for consultations, support, and tailored protection plans for your organization.',
   keywords: 'contact IntelX360, cybersecurity consultation, cyber support, request a quote, security contact form, cyber defense inquiry',
+  openGraph: {
+    title: 'Contact IntelX360 | Speak with Our Cybersecurity Experts',
+    description: 'Reach out for consultations, support, or a customized quote. Our team is ready to help secure your organization.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Contact IntelX360 | Speak with Our Cybersecurity Experts',
+    description: 'Reach out for consultations, support, or a customized quote. Our team is ready to help secure your organization.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function ContactPage() {

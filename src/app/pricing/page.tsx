@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: 'IntelX360 Pricing | Transparent Cybersecurity Packages for All Businesses',
   description: 'Discover IntelX360’s flexible cybersecurity pricing. Choose the right plan for your organization’s size and needs — from MSSP to advanced threat intelligence and cloud protection.',
   keywords: 'cybersecurity pricing, MSSP packages, threat intelligence plans, penetration testing cost, managed security service cost, cybersecurity plans',
+  openGraph: {
+    title: 'IntelX360 Pricing | Transparent Cybersecurity Packages',
+    description: 'Discover flexible cybersecurity pricing for individuals, SMBs, and enterprises. Find the right plan for your security needs.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'IntelX360 Pricing | Transparent Cybersecurity Packages',
+    description: 'Discover flexible cybersecurity pricing for individuals, SMBs, and enterprises. Find the right plan for your security needs.',
+    images: ['/og-image.png'],
+  },
 };
 
 const whyChooseUs = [

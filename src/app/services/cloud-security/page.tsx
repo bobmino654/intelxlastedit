@@ -7,8 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 
 export const metadata: Metadata = {
-  title: 'Cloud Security Services',
+  title: 'Cloud Security Services | IntelX360',
   description: 'Safeguard your infrastructure, applications, and data across AWS, Azure, and Google Cloud with our comprehensive cloud security services.',
+  openGraph: {
+    title: 'Cloud Security Services | IntelX360',
+    description: 'Safeguard your infrastructure and data across AWS, Azure, and Google Cloud.',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    title: 'Cloud Security Services | IntelX360',
+    description: 'Safeguard your infrastructure and data across AWS, Azure, and Google Cloud.',
+    images: ['/og-image.png'],
+  },
 };
 
 const approachPhases = [

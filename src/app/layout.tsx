@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.intelx360.com'),
   title: {
     default: 'IntelX360 | Cybersecurity, Threat Intelligence & Managed Security',
-    template: '%s | IntelX360',
+    template: '%s',
   },
   description: 'IntelX360 helps organizations stay ahead of cyber threats with penetration testing, SOC-as-a-Service, incident response, threat intelligence, and vCISO services. Trusted cybersecurity partner for SMBs and enterprises.',
   keywords: 'cybersecurity services, threat intelligence, SOC as a Service, penetration testing, incident response, dark web monitoring, vCISO, compliance audits, digital risk protection, enterprise cybersecurity',
