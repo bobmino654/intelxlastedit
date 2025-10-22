@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/pricing/personal',
     '/pricing/smb',
     '/privacy-policy',
-    '/resources',
     '/services',
     '/services/attack-surface-management',
     '/services/brand-protection',
