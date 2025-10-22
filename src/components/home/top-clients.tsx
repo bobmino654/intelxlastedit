@@ -12,7 +12,6 @@ const clients = [
   { name: 'VFSGlobal', logoUrl: '/assets/vfsglobal.png' },
   { name: 'Vodafone', logoUrl: '/assets/vodafone.png' },
   { name: 'Coca-Cola', logoUrl: '/assets/cocacola.png' },
-  { name: 'Ghibli', logoUrl: '/assets/ghibli.png' },
   { name: 'HSBC', logoUrl: '/assets/hsbc.png' },
   { name: 'NBK', logoUrl: '/assets/nbk.webp' },
   { name: 'XDEGEMAC', logoUrl: '/assets/xdegemac.png' },
