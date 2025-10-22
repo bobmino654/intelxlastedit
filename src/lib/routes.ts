@@ -28,6 +28,5 @@ export const NAV_LINKS: NavLink[] = [
   },
   { href: '/cybersecurity-outsourcing', label: 'Cybersecurity Outsourcing' },
   { href: '/pricing', label: 'Pricing' },
-  { href: '/case-studies', label: 'Case Studies' },
   { href: '/contact', label: 'Contact' },
 ];
