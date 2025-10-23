@@ -3,7 +3,6 @@ import { HeroSection } from '@/components/home/hero-section';
 import { TopClients } from '@/components/home/top-clients';
 import { ServicesOverview } from '@/components/home/services-overview';
 import { PricingTeaser } from '@/components/home/pricing-teaser';
-import { TestimonialsCarousel } from '@/components/home/testimonials-carousel';
 import { Separator } from '@/components/ui/separator';
 import { PartnerBanner } from '@/components/home/partner-banner';
 import type { Metadata } from 'next';
@@ -31,7 +30,6 @@ export default function Home() {
       <ServicesOverview />
       <PartnerBanner />
       <PricingTeaser />
-      <TestimonialsCarousel />
       <Separator className="container my-12" />
     </>
   );
