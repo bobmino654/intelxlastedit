@@ -105,7 +105,7 @@ export default function GovernmentSolutionsPage() {
         <Card className="mx-auto max-w-2xl bg-primary/5">
           <CardHeader>
             <CardTitle className="font-headline text-2xl text-accent">Confidential Engagements</CardTitle>
-          </Header>
+          </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">For confidential briefings, government-grade demonstrations, or strategic discussions, please contact IntelX360 through official communication channels.</p>
             <Button size="lg" asChild className="mt-6">
