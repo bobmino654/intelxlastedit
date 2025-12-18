@@ -32,11 +32,11 @@ const capabilities = [
         description: 'AnubisX is a strategic intelligence platform designed to uncover hidden digital identities, analyze behavioral patterns, and detect coordinated influence activities across public digital environments. The system supports investigative workflows and intelligence assessments by transforming fragmented digital signals into structured, actionable insights.',
         logo: (
             <Image 
-                src="/assets/anubis-x.png" 
+                src="/assets/anubisx.png" 
                 alt="AnubisX Digital Identity & Behavioral Intelligence Logo"
-                width={200}
-                height={50}
-                className="object-contain"
+                width={150}
+                height={40}
+                className="object-contain mix-blend-plus-lighter"
             />
         )
     },
