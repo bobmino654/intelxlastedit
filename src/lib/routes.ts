@@ -26,7 +26,7 @@ export const NAV_LINKS: NavLink[] = [
     label: 'Services',
     subLinks: allServiceLinks
   },
-  { href: '/cybersecurity-outsourcing', label: 'Cybersecurity Outsourcing' },
+  { href: '/government-solutions', label: 'Government Solutions' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/contact', label: 'Contact' },
 ];

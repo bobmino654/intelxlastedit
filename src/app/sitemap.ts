@@ -1,3 +1,4 @@
+
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -7,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/',
     '/about',
     '/contact',
-    '/cybersecurity-outsourcing',
+    '/government-solutions',
     '/pricing',
     '/pricing/enterprise',
     '/pricing/personal',
