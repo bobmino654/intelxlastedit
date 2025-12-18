@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
 import { AnubisArgusLogo } from '@/components/logos/anubis-argus';
+import { AnubisXLogo } from '@/components/logos/anubis-x';
 import { ParticleCanvas } from '@/components/home/particle-canvas';
 
 export const metadata: Metadata = {
@@ -30,15 +31,7 @@ const capabilities = [
         title: 'AnubisX',
         subtitle: 'Digital Identity & Behavioral Intelligence Platform',
         description: 'AnubisX is a strategic intelligence platform designed to uncover hidden digital identities, analyze behavioral patterns, and detect coordinated influence activities across public digital environments. The system supports investigative workflows and intelligence assessments by transforming fragmented digital signals into structured, actionable insights.',
-        logo: (
-            <Image 
-                src="/assets/anubisx.png" 
-                alt="AnubisX Digital Identity & Behavioral Intelligence Logo"
-                width={150}
-                height={40}
-                className="object-contain mix-blend-plus-lighter"
-            />
-        )
+        logo: <AnubisXLogo className="h-12 w-auto" />
     },
     {
         id: 'argus',
