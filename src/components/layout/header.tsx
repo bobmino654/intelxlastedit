@@ -8,7 +8,7 @@ import React from 'react';
 import { NAV_LINKS } from '@/lib/routes';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from './logo';
 import { MobileNav } from './mobile-nav';
 import {
@@ -69,6 +69,9 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
+                <SheetHeader>
+                    <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
+                </SheetHeader>
               <MobileNav onLinkClick={() => setIsMobileMenuOpen(false)} />
             </SheetContent>
           </Sheet>
