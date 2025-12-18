@@ -51,6 +51,7 @@ ListItem.displayName = "ListItem"
 
 
 export function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const pathname = usePathname();
 
   return (
@@ -60,7 +61,7 @@ export function Header() {
           <Logo />
         </div>
         <div className="flex items-center md:hidden">
-          <Sheet>
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
@@ -68,7 +69,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-              <MobileNav />
+              <MobileNav onLinkClick={() => setIsMobileMenuOpen(false)} />
             </SheetContent>
           </Sheet>
         </div>

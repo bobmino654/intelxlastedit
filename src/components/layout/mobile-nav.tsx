@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
 import { LinkComponent as Link } from "@/components/LinkComponent";
 
-export function MobileNav() {
+export function MobileNav({ onLinkClick }: { onLinkClick: () => void }) {
   const pathname = usePathname();
   const servicesDefaultValue = pathname.startsWith('/services') ? '/services' : undefined;
 
@@ -24,13 +24,14 @@ export function MobileNav() {
                 <Accordion type="single" collapsible key={link.href} value={servicesDefaultValue} >
                     <AccordionItem value={link.href} className="border-b-0">
                         <AccordionTrigger className={cn("w-full justify-between rounded-md p-3 text-lg font-medium hover:no-underline", pathname.startsWith(link.href) ? 'text-accent' : '' )}>
-                             <Link href={link.href}>{link.label}</Link>
+                             <Link href={link.href} onClick={onLinkClick}>{link.label}</Link>
                         </AccordionTrigger>
                         <AccordionContent className="pl-4">
                             {link.subLinks.map(subLink => (
                                 <Link
                                     key={subLink.href}
                                     href={subLink.href}
+                                    onClick={onLinkClick}
                                     className={cn("block w-full rounded-md p-3 text-base font-medium", pathname === subLink.href ? 'bg-accent text-accent-foreground' : '')}
                                 >
                                     {subLink.label}
@@ -43,6 +44,7 @@ export function MobileNav() {
                 <Link
                     key={link.href}
                     href={link.href}
+                    onClick={onLinkClick}
                     className={cn("block w-full rounded-md p-3 text-lg font-medium", pathname === link.href && link.href !== '/' ? 'bg-accent text-accent-foreground' : '')}
                 >
                     {link.label}
@@ -52,7 +54,7 @@ export function MobileNav() {
       </nav>
        <div className="mt-auto border-t pt-4">
             <Button asChild className="w-full">
-                <Link href="/contact">Get Protected</Link>
+                <Link href="/contact" onClick={onLinkClick}>Get Protected</Link>
             </Button>
        </div>
     </div>
