@@ -16,6 +16,7 @@ export const allServiceLinks: NavLink[] = [
     { href: '/services/attack-surface-management', label: 'Attack Surface Management', description: 'Discover and monitor external assets.' },
     { href: '/services/brand-protection', label: 'Brand Protection', description: 'Takedown phishing sites and fake apps.' },
     { href: '/services/supply-chain-threat-intelligence', label: 'Supply Chain Intelligence', description: 'Monitor third-party vendor risks.' },
+    { href: '/cybersecurity-outsourcing', label: 'Cybersecurity Outsourcing', description: 'Gain 24/7 expert protection and reduce costs.' },
 ];
 
 export const NAV_LINKS: NavLink[] = [
