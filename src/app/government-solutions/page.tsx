@@ -1,9 +1,10 @@
 
 import { Metadata } from 'next';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LinkComponent as Link } from '@/components/LinkComponent';
-import { Shield, Eye, Users } from 'lucide-react';
+import { AnubisArgusLogo } from '@/components/logos/anubis-argus';
 import { ParticleCanvas } from '@/components/home/particle-canvas';
 
 export const metadata: Metadata = {
@@ -25,16 +26,26 @@ export const metadata: Metadata = {
 
 const capabilities = [
     {
+        id: 'anubisx',
         title: 'AnubisX',
         subtitle: 'Digital Identity & Behavioral Intelligence Platform',
         description: 'AnubisX is a strategic intelligence platform designed to uncover hidden digital identities, analyze behavioral patterns, and detect coordinated influence activities across public digital environments. The system supports investigative workflows and intelligence assessments by transforming fragmented digital signals into structured, actionable insights.',
-        icon: Users
+        logo: (
+            <Image 
+                src="/assets/anubis-x.png" 
+                alt="AnubisX Digital Identity & Behavioral Intelligence Logo"
+                width={200}
+                height={50}
+                className="object-contain"
+            />
+        )
     },
     {
+        id: 'argus',
         title: 'Anubis ARGUS',
         subtitle: 'Strategic Digital Surveillance & Early Warning Intelligence System',
         description: 'Anubis ARGUS is a mission-oriented early warning system focused on detecting rapidly emerging visual media threats across public digital platforms. The system provides real-time situational awareness by identifying abnormal content propagation patterns and delivering early alerts before widespread digital impact occurs.',
-        icon: Eye
+        logo: <AnubisArgusLogo className="h-12 w-auto" />
     }
 ];
 
@@ -76,10 +87,9 @@ export default function GovernmentSolutionsPage() {
                 {capabilities.map((capability) => (
                     <Card key={capability.title} className="bg-background/50 border border-border/50">
                         <CardHeader>
-                             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                                <capability.icon className="h-6 w-6" />
+                             <div className="mb-4 h-12 flex items-center">
+                                {capability.logo}
                             </div>
-                            <CardTitle className="font-headline text-2xl text-accent">{capability.title}</CardTitle>
                             <p className="pt-2 text-sm font-semibold text-muted-foreground">{capability.subtitle}</p>
                         </CardHeader>
                         <CardContent>
